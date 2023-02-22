@@ -13,64 +13,52 @@ const TabProduct = ({
 }) => {
   return (
     <div
+    
       className={`product-area ${spaceTopClass ? spaceTopClass : ""} ${
         spaceBottomClass ? spaceBottomClass : ""
       } ${bgColorClass ? bgColorClass : ""}`}
     >
       <div className="container">
-        <SectionTitle titleText="DAILY DEALS!" positionClass="text-center" />
-        <Tab.Container defaultActiveKey="bestSeller">
+        <SectionTitle titleText="VERIFIED DIAMOND NFTS!" positionClass="text-center" />
+        <Tab.Container defaultActiveKey="stoneDiamond">
           <Nav
             variant="pills"
             className="product-tab-list pt-30 pb-55 text-center"
           >
             <Nav.Item>
-              <Nav.Link eventKey="newArrival">
-                <h4>New Arrivals</h4>
+              <Nav.Link eventKey="individualJewellery">
+                <h4>Individual Jewellery</h4>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="bestSeller">
-                <h4>Best Sellers</h4>
+              <Nav.Link eventKey="stoneDiamond">
+                <h4>Stones</h4>
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="saleItems">
-                <h4>Sale Items</h4>
-              </Nav.Link>
-            </Nav.Item>
+            
           </Nav>
           <Tab.Content>
-            <Tab.Pane eventKey="newArrival">
+            <Tab.Pane eventKey="individualJewellery">
               <div className="row">
                 <ProductGrid
                   category={category}
                   type="new"
-                  limit={8}
+                  limit={4}
                   spaceBottomClass="mb-25"
                 />
               </div>
             </Tab.Pane>
-            <Tab.Pane eventKey="bestSeller">
+            <Tab.Pane eventKey="stoneDiamond">
               <div className="row">
                 <ProductGrid
                   category={category}
-                  type="bestSeller"
+                  type="stoneDiamond"
                   limit={8}
                   spaceBottomClass="mb-25"
                 />
               </div>
             </Tab.Pane>
-            <Tab.Pane eventKey="saleItems">
-              <div className="row">
-                <ProductGrid
-                  category={category}
-                  type="saleItems"
-                  limit={8}
-                  spaceBottomClass="mb-25"
-                />
-              </div>
-            </Tab.Pane>
+            
           </Tab.Content>
         </Tab.Container>
       </div>

@@ -29,7 +29,7 @@ const HomeFashion = () => {
  <SectionTitleWithText spaceTopClass="pt-95" spaceBottomClass="pb-90" />
  {/* category */}
  <CategoryTwoSlider spaceTopClass="pt-100" spaceBottomClass="pb-95" />
-
+<br/><br/>
         {/* tab product */}
         <TabProduct spaceBottomClass="pb-60" category="fashion" />
 
