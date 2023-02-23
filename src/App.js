@@ -6,9 +6,11 @@ import { ToastProvider } from "react-toast-notifications";
 import { multilanguage, loadLanguages } from "redux-multilanguage";
 import { connect } from "react-redux";
 import { BreadcrumbsProvider } from "react-breadcrumbs-dynamic";
-
+import {DiamondsStones,IndividualJewellery}from "./pages/index";
 // home pages
 const HomeFashion = lazy(() => import("./pages/home/HomeFashion"));
+
+
 const HomeFashionTwo = lazy(() => import("./pages/home/HomeFashionTwo"));
 const HomeFashionThree = lazy(() => import("./pages/home/HomeFashionThree"));
 const HomeFashionFour = lazy(() => import("./pages/home/HomeFashionFour"));
@@ -144,7 +146,16 @@ const App = (props) => {
                   component={HomeFashion}
                 />
 
-               
+               {/* Diamonds stones */}
+               <Route
+                  path={"/diamonds-stones"}
+                  component={DiamondsStones}
+                />
+                 {/* Diamonds stones */}
+               <Route
+                  path={"/individual-jewellery"}
+                  component={IndividualJewellery}
+                />
                 {/* Homepages */}
                 <Route
                   path={process.env.PUBLIC_URL + "/home-fashion"}

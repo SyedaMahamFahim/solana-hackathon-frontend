@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
 import React from "react";
 
-const  SectionTitleWithText = ({ spaceTopClass, spaceBottomClass }) => {
+const  SectionTitleWithText = ({ spaceTopClass, spaceBottomClass,isH5Required }) => {
+
   return (
     <div
       className={`welcome-area ${spaceTopClass ? spaceTopClass : ""} ${
@@ -10,7 +10,10 @@ const  SectionTitleWithText = ({ spaceTopClass, spaceBottomClass }) => {
     >
       <div className="container">
         <div className="welcome-content text-center">
-          <h5>Who Are We</h5>
+         
+          <h5  style={{
+            display: isH5Required ? 'block' : 'none'
+          }}>Who Are We</h5>
           <h1>Welcome To Flone</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -24,9 +27,5 @@ const  SectionTitleWithText = ({ spaceTopClass, spaceBottomClass }) => {
   );
 };
 
-SectionTitleWithText.propTypes = {
-  spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
-};
 
 export default SectionTitleWithText;

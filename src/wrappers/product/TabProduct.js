@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
 import React from "react";
 import Tab from "react-bootstrap/Tab";
 import Nav from "react-bootstrap/Nav";
 import SectionTitle from "../../components/section-title/SectionTitle";
 import ProductGrid from "./ProductGrid";
+import { nftsData } from "../../data";
 
 const TabProduct = ({
   spaceTopClass,
@@ -42,6 +42,7 @@ const TabProduct = ({
               <div className="row">
                 <ProductGrid
                   category={category}
+                  products={nftsData}
                   type="new"
                   limit={4}
                   spaceBottomClass="mb-25"
@@ -51,6 +52,8 @@ const TabProduct = ({
             <Tab.Pane eventKey="stoneDiamond">
               <div className="row">
                 <ProductGrid
+                                  products={nftsData}
+
                   category={category}
                   type="stoneDiamond"
                   limit={8}
@@ -66,11 +69,5 @@ const TabProduct = ({
   );
 };
 
-TabProduct.propTypes = {
-  bgColorClass: PropTypes.string,
-  category: PropTypes.string,
-  spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
-};
 
 export default TabProduct;
