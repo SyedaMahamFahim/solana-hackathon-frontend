@@ -16,33 +16,17 @@ const ProductGrid = ({
   wishlistItems,
   compareItems,
   sliderClassName,
-  spaceBottomClass
+  spaceBottomClass,
 }) => {
   return (
     <Fragment>
-      {products.map(product => {
+      {products.map((product) => {
         return (
           <ProductGridListSingle
             sliderClassName={sliderClassName}
             spaceBottomClass={spaceBottomClass}
             product={product}
             currency={currency}
-            addToCart={addToCart}
-            addToWishlist={addToWishlist}
-            addToCompare={addToCompare}
-            cartItem={
-              cartItems.filter(cartItem => cartItem.id === product.id)[0]
-            }
-            wishlistItem={
-              wishlistItems.filter(
-                wishlistItem => wishlistItem.id === product.id
-              )[0]
-            }
-            compareItem={
-              compareItems.filter(
-                compareItem => compareItem.id === product.id
-              )[0]
-            }
             key={product.id}
           />
         );
@@ -61,19 +45,19 @@ ProductGrid.propTypes = {
   products: PropTypes.array,
   sliderClassName: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  wishlistItems: PropTypes.array
+  wishlistItems: PropTypes.array,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     currency: state.currencyData,
     cartItems: state.cartData,
     wishlistItems: state.wishlistData,
-    compareItems: state.compareData
+    compareItems: state.compareData,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     addToCart: (
       item,
@@ -97,7 +81,7 @@ const mapDispatchToProps = dispatch => {
     },
     addToCompare: (item, addToast) => {
       dispatch(addToCompare(item, addToast));
-    }
+    },
   };
 };
 

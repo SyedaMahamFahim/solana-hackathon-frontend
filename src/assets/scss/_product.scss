@@ -4,16 +4,16 @@
   .row {
     &.three-column {
       .col-xl-3 {
-        flex: 1 0 33.3333%;
+        flex: 1 0 25%;
 
-        max-width: 33.3333%;
+        max-width: 25%;
 
         transition: 0.5s;
 
         @media #{$lg-layout} {
-          flex: 1 0 33.3333%;
+          flex: 1 0 25%;
 
-          max-width: 33.3333%;
+          max-width: 25%;
         }
         @media #{$md-layout} {
           flex: 1 0 50%;

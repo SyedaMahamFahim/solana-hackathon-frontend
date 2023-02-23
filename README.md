@@ -8,5 +8,4 @@ remove link from explore diamond (done)
 
 
 FILE I HAVE USED
-ProductGridSingle 
-TabProduct 
+ShopListStandard
