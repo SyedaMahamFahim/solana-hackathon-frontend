@@ -3,7 +3,8 @@ import "./diamonds_svg.css";
 
 const RoundDiamondSvg = () => {
   return (
-    <>
+    <><div         className="css-qhtouv"
+    >
       <svg
         viewBox="0 0 32 32"
         className="css-rex2z0"
@@ -18,7 +19,7 @@ const RoundDiamondSvg = () => {
       <div data-component-name="Text" className="css-1xu05hx">
         Round
       </div>
-      
+     </div>
     </>
   );
 };

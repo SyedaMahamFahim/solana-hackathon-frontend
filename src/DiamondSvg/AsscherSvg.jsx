@@ -4,15 +4,10 @@ import "./diamonds_svg.css";
 const AsscherSvg = () => {
   return (
     <>
-      <a
-        data-component-name="LinkBox"
-        href="https://www.bluenile.com/diamonds/asscher-cut"
+      <div
         className="css-qhtouv"
-        tabIndex={0}
       >
         <svg
-          data-component-name="SvgIcon"
-          aria-hidden="true"
           viewBox="0 0 32 32"
           className="css-rex2z0"
         >
@@ -23,13 +18,11 @@ const AsscherSvg = () => {
             />
           </g>
         </svg>
-        <div data-component-name="Text" className="css-1xu05hx">
+        <div className="css-1xu05hx">
           Asscher
         </div>
-        <div className="css-16yku65">
-          <div className="focus-indicator css-7hqtpb" />
-        </div>
-      </a>
+      
+      </div>
     </>
   );
 };

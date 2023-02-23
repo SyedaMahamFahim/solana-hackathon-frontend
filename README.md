@@ -2,6 +2,6 @@ individual Jewellery
 Stone Diamond
 
 Todo
-Remove Extra pages 
+Remove Extra pages  
 add data to product.json file
-remove link from explore diamond 
+remove link from explore diamond (done)
