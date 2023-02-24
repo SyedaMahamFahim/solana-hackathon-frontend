@@ -2,7 +2,11 @@ import React from "react";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
-import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
+
+
+import {
+  SectionTitleWithText
+} from "../components/index";
 
 import {
   Breadcrumb,

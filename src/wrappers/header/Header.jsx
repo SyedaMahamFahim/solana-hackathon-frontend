@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../../components/header/Logo";
-import NavMenu from "../../components/header/NavMenu";
-import MobileMenu from "../../components/header/MobileMenu";
+
+
+import {
+  Logo,
+    NavMenu,
+    MobileMenu
+} from "../../components/index";
 import { ConnectBtn } from "../../components";
+
+
 const Header = ({
   layout,
   headerPaddingClass,

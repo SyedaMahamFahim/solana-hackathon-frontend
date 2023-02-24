@@ -4,17 +4,11 @@ import { connect } from "react-redux";
 import { addToCart } from "../../redux/actions/cartActions";
 import { addToWishlist } from "../../redux/actions/wishlistActions";
 import { addToCompare } from "../../redux/actions/compareActions";
-import ProductGridListSingle from "../../components/product/ProductGridListSingle";
+import NftGridListSingle from "../../components/nfts/NftGridListSingle";
 
 const NftGridList = ({
   products,
   currency,
-  addToCart,
-  addToWishlist,
-  addToCompare,
-  cartItems,
-  wishlistItems,
-  compareItems,
   sliderClassName,
   spaceBottomClass,
 }) => {
@@ -22,7 +16,7 @@ const NftGridList = ({
     <Fragment>
       {products.map((product) => {
         return (
-          <ProductGridListSingle
+          <NftGridListSingle
             sliderClassName={sliderClassName}
             spaceBottomClass={spaceBottomClass}
             product={product}

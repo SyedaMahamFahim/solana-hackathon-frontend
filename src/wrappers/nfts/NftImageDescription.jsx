@@ -3,11 +3,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { useToasts } from "react-toast-notifications";
 import { getDiscountPrice } from "../../helpers/product";
-import ProductImageGallery from "../../components/product/ProductImageGallery";
-import ProductDescriptionInfo from "../../components/product/ProductDescriptionInfo";
-import ProductImageGallerySideThumb from "../../components/product/ProductImageGallerySideThumb";
-import ProductImageFixed from "../../components/product/ProductImageFixed";
 
+
+import {
+  NftDescriptionInfo,
+  NftImageGallery
+} from "../../components/index";
 const NftImageDescription = ({
   spaceTopClass,
   spaceBottomClass,
@@ -41,11 +42,11 @@ const NftImageDescription = ({
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-6">
-            <ProductImageGallery product={product} />
+            <NftImageGallery product={product} />
           </div>
           <div className="col-lg-6 col-md-6">
             {/* product description info */}
-            <ProductDescriptionInfo
+            <NftDescriptionInfo
               product={product}
               discountedPrice={discountedPrice}
               currency={currency}

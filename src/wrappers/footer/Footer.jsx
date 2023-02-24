@@ -2,9 +2,8 @@ import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { animateScroll } from "react-scroll";
-import FooterCopyright from "../../components/footer/FooterCopyright";
-import FooterNewsletter from "../../components/footer/FooterNewsletter";
 
+import { FooterCopyright, FooterNewsletter } from "../../components/index";
 const Footer = ({
   backgroundColorClass,
   spaceTopClass,

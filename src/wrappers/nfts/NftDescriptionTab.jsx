@@ -1,7 +1,6 @@
-import PropTypes from "prop-types";
 import React from "react";
-import Tab from "react-bootstrap/Tab";
-import Nav from "react-bootstrap/Nav";
+
+import {Tab,Nav} from 'react-bootstrap';
 
 const NftDescriptionTab = ({ spaceBottomClass, productFullDesc }) => {
   return (
@@ -46,11 +45,6 @@ const NftDescriptionTab = ({ spaceBottomClass, productFullDesc }) => {
       </div>
     </div>
   );
-};
-
-NftDescriptionTab.propTypes = {
-  productFullDesc: PropTypes.string,
-  spaceBottomClass: PropTypes.string,
 };
 
 export default NftDescriptionTab;

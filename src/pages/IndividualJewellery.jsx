@@ -2,11 +2,10 @@ import React from "react";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
-import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
+import { SectionTitleWithText } from "../components/index";
 import { nftsData } from "../data";
 
-
-import { Breadcrumb} from "../wrappers";
+import { Breadcrumb } from "../wrappers";
 
 const IndividualJewellery = ({ location }) => {
   const { pathname } = location;
@@ -32,7 +31,7 @@ const IndividualJewellery = ({ location }) => {
           spaceBottomClass="pb-55"
           isH5Required={false}
         />
-       
+
         {/* <TabNft spaceBottomClass="pb-60" category="fashion" /> */}
       </Layout>
     </>

@@ -1,14 +1,16 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
-import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
+
 import Paginator from "react-hooks-paginator";
 import { getSortedProducts } from "../helpers/product";
 
 import products from "../data/products.json";
 
-import { Breadcrumb, ShopTopbar, ShopNft } from "../wrappers";
+import { Breadcrumb, MarketPlaceTopbar, ShopNft } from "../wrappers";
+import { SectionTitleWithText } from "../components/index";
+
 const DiamondsStones = ({ location }) => {
   const [layout, setLayout] = useState("list");
   const [sortType, setSortType] = useState("");
@@ -76,7 +78,7 @@ const DiamondsStones = ({ location }) => {
             <div className="row">
               <div className="col-lg-12 order-1 order-lg-2">
                 {/* shop topbar default */}
-                <ShopTopbar
+                <MarketPlaceTopbar
                   getLayout={getLayout}
                   getFilterSortParams={getFilterSortParams}
                   productCount={products.length}

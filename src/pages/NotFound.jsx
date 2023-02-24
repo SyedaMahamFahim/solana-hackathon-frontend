@@ -6,6 +6,7 @@ import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
 
 
+
 import { Breadcrumb} from "../wrappers";
 
 const NotFound = ({ location }) => {

@@ -2,10 +2,9 @@ import React, { Fragment } from "react";
 import MetaTags from "react-meta-tags";
 import Layout from "../layouts/Layout";
 
-import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
+import { SectionTitleWithText } from "../components/index";
 
-
-import { HeroSlider,TabNft ,DiamondSlider} from "../wrappers";
+import { HeroSlider, TabNft, DiamondSlider } from "../wrappers";
 
 const Home = () => {
   return (

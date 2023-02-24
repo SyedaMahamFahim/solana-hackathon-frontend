@@ -1,7 +1,7 @@
 import React from "react";
 import Tab from "react-bootstrap/Tab";
 import Nav from "react-bootstrap/Nav";
-import SectionTitle from "../../components/section-title/SectionTitle";
+import {SectionTitleWithoutText} from "../../components/index";
 import NftGrid from "../nfts/NftGrid";
 import { nftsData } from "../../data";
 
@@ -18,7 +18,7 @@ const TabNft = ({
       } ${bgColorClass ? bgColorClass : ""}`}
     >
       <div className="container">
-        <SectionTitle
+        <SectionTitleWithoutText
           titleText="VERIFIED DIAMOND NFTS!"
           positionClass="text-center"
         />

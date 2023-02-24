@@ -7,22 +7,21 @@ import TextGrid from "./text-grid/TextGrid";
 import NftDescriptionTab from "./nfts/NftDescriptionTab";
 import NftImageDescription from "./nfts/NftImageDescription";
 import ShopNft from "./nfts/ShopNft";
-import ShopTopbar from "./nfts/ShopTopbar";
-import ShopTopbarFilter from "./nfts/ShopTopbarFilter";
+import MarketPlaceTopbar from "./nfts/MarketPlaceTopbar";
+import MarketPlaceTopbarFilter from "./nfts/MarketPlaceTopbarFilter";
 import TabNft from "./nfts/TabNft";
 
-export{
-    Breadcrumb,
-    DiamondSlider,
-    Footer,
-    Header,
-    HeroSlider,
-    TextGrid,
-    NftDescriptionTab,
-    NftImageDescription,
-    ShopNft,
-    ShopTopbar,
-    ShopTopbarFilter,
-    TabNft
-    
-}
+export {
+  Breadcrumb,
+  DiamondSlider,
+  Footer,
+  Header,
+  HeroSlider,
+  TextGrid,
+  NftDescriptionTab,
+  NftImageDescription,
+  ShopNft,
+  MarketPlaceTopbar,
+  MarketPlaceTopbarFilter,
+  TabNft,
+};

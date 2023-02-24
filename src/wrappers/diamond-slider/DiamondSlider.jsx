@@ -1,7 +1,7 @@
 import React from "react";
 import Swiper from "react-id-swiper";
 
-import SectionTitleFour from "../../components/section-title/SectionTitleFour.js";
+import { SectionTitleWithoutText } from "../../components/index";
 import { diamondsList } from "../../data";
 
 const DiamondSlider = ({ spaceTopClass, spaceBottomClass }) => {
@@ -36,7 +36,7 @@ const DiamondSlider = ({ spaceTopClass, spaceBottomClass }) => {
     >
       <div className="container">
         {/* section title */}
-        <SectionTitleFour
+        <SectionTitleWithoutText
           titleText="Explore Diamonds"
           spaceBottomClass="mb-40"
         />

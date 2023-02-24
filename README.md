@@ -16,7 +16,7 @@ TabNft
 
 wrapper
 Breadcrumb
-ShopTopbar
+MarketPlaceTopbar
 ShopNft
 TextGrid
 NftDescriptionTab
