@@ -1,14 +1,10 @@
-import PropTypes from "prop-types";
 import React, { Fragment } from "react";
-import MarketPlaceTopAction from "./MarketPlaceTopAction";
-import { toggleShopTopFilter } from "../../helpers/product";
+
 
 const MarketPlaceTopActionFilter = ({
   getFilterSortParams,
   productCount,
   sortedProductCount,
-  products,
-  getSortParams,
 }) => {
   return (
     <Fragment>
@@ -30,25 +26,11 @@ const MarketPlaceTopActionFilter = ({
           </p>
         </div>
 
-        <div className="filter-active">
-          <button onClick={(e) => toggleShopTopFilter(e)}>
-            <i className="fa fa-plus"></i> filter
-          </button>
-        </div>
+       
       </div>
 
-      {/* shop top filter */}
-      <MarketPlaceTopAction products={products} getSortParams={getSortParams} />
     </Fragment>
   );
-};
-
-MarketPlaceTopActionFilter.propTypes = {
-  getFilterSortParams: PropTypes.func,
-  getSortParams: PropTypes.func,
-  productCount: PropTypes.number,
-  products: PropTypes.array,
-  sortedProductCount: PropTypes.number,
 };
 
 export default MarketPlaceTopActionFilter;
