@@ -31,22 +31,13 @@ const MenuCart = ({ cartData, currency, deleteFromCart }) => {
               return (
                 <li className="single-shopping-cart" key={key}>
                   <div className="shopping-cart-img">
-                    <Link to={process.env.PUBLIC_URL + "/product/" + single.id}>
-                      <img
-                        alt=""
-                        src={process.env.PUBLIC_URL + single.image[0]}
-                        className="img-fluid"
-                      />
+                    <Link to={"/product/" + single.id}>
+                      <img alt="" src={single.image[0]} className="img-fluid" />
                     </Link>
                   </div>
                   <div className="shopping-cart-title">
                     <h4>
-                      <Link
-                        to={process.env.PUBLIC_URL + "/product/" + single.id}
-                      >
-                        {" "}
-                        {single.name}{" "}
-                      </Link>
+                      <Link to={"/product/" + single.id}> {single.name} </Link>
                     </h4>
                     <h6>Qty: {single.quantity}</h6>
                     <span>
@@ -82,13 +73,10 @@ const MenuCart = ({ cartData, currency, deleteFromCart }) => {
             </h4>
           </div>
           <div className="shopping-cart-btn btn-hover text-center">
-            <Link className="default-btn" to={process.env.PUBLIC_URL + "/cart"}>
+            <Link className="default-btn" to={"/cart"}>
               view cart
             </Link>
-            <Link
-              className="default-btn"
-              to={process.env.PUBLIC_URL + "/checkout"}
-            >
+            <Link className="default-btn" to={"/checkout"}>
               checkout
             </Link>
           </div>
@@ -103,7 +91,7 @@ const MenuCart = ({ cartData, currency, deleteFromCart }) => {
 MenuCart.propTypes = {
   cartData: PropTypes.array,
   currency: PropTypes.object,
-  deleteFromCart: PropTypes.func
+  deleteFromCart: PropTypes.func,
 };
 
 export default MenuCart;

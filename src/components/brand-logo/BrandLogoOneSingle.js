@@ -8,7 +8,7 @@ const BrandLogoOneSingle = ({ data, sliderClassName, spaceBottomClass }) => {
         spaceBottomClass ? spaceBottomClass : ""
       }`}
     >
-      <img src={process.env.PUBLIC_URL + data.image} alt="" />
+      <img src={data.image} alt="" />
     </div>
   );
 };
@@ -16,7 +16,7 @@ const BrandLogoOneSingle = ({ data, sliderClassName, spaceBottomClass }) => {
 BrandLogoOneSingle.propTypes = {
   data: PropTypes.object,
   sliderClassName: PropTypes.string,
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default BrandLogoOneSingle;

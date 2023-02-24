@@ -18,9 +18,7 @@ const CountDownSeven = ({ bgColorClass, spaceTopClass, dateTime }) => {
             <Countdown date={new Date(dateTime)} renderer={Renderer} />
           </div>
           <div className="slider-btn-12 btn-hover">
-            <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-              MORE OFFER
-            </Link>
+            <Link to={"/shop-grid-standard"}>MORE OFFER</Link>
           </div>
         </div>
       </div>
@@ -31,7 +29,7 @@ const CountDownSeven = ({ bgColorClass, spaceTopClass, dateTime }) => {
 CountDownSeven.propTypes = {
   bgColorClass: PropTypes.string,
   dateTime: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CountDownSeven;

@@ -16,7 +16,7 @@ const ProductGridSingleSix = ({
   wishlistItem,
   compareItem,
   sliderClassName,
-  spaceBottomClass
+  spaceBottomClass,
 }) => {
   const [modalShow, setModalShow] = useState(false);
   const { addToast } = useToasts();
@@ -40,10 +40,10 @@ const ProductGridSingleSix = ({
           }`}
         >
           <div className="product-img">
-            <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
+            <Link to={"/product/" + product.id}>
               <img
                 className="default-img img-fluid"
-                src={process.env.PUBLIC_URL + product.image[0]}
+                src={product.image[0]}
                 alt=""
               />
             </Link>
@@ -62,9 +62,7 @@ const ProductGridSingleSix = ({
           </div>
           <div className="product-content">
             <h3>
-              <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
-                {product.name}
-              </Link>
+              <Link to={"/product/" + product.id}>{product.name}</Link>
             </h3>
 
             <div className="product-price">
@@ -190,7 +188,7 @@ ProductGridSingleSix.propTypes = {
   product: PropTypes.object,
   sliderClassName: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  wishlistItem: PropTypes.object
+  wishlistItem: PropTypes.object,
 };
 
 export default ProductGridSingleSix;

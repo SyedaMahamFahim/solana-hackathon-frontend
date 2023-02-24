@@ -8,11 +8,7 @@ const FeatureIconFiveSingle = ({ data, spaceBottomClass, textAlignClass }) => {
         className={`support-wrap-4 ${spaceBottomClass ? spaceBottomClass : ""}`}
       >
         <div className="support-icon-4">
-          <img
-            className="animated"
-            src={process.env.PUBLIC_URL + data.image}
-            alt=""
-          />
+          <img className="animated" src={data.image} alt="" />
         </div>
         <div className="support-content-4">
           <h5>{data.title}</h5>
@@ -25,7 +21,7 @@ const FeatureIconFiveSingle = ({ data, spaceBottomClass, textAlignClass }) => {
 
 FeatureIconFiveSingle.propTypes = {
   data: PropTypes.object,
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default FeatureIconFiveSingle;

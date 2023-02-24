@@ -10,9 +10,7 @@ const HeroSliderThirtyFive = () => {
       <div
         className="slider-height-2 bg-img slider-content-center"
         style={{
-          backgroundImage: `url(${
-            process.env.PUBLIC_URL + sliderData.backgroundImage
-          })`
+          backgroundImage: `url(${sliderData.backgroundImage})`,
         }}
       >
         <div className="container">
@@ -27,10 +25,7 @@ const HeroSliderThirtyFive = () => {
                   />
                 </div>
                 <div className="slider-btn-12 btn-hover">
-                  <Link
-                    className="animated"
-                    to={process.env.PUBLIC_URL + sliderData.url}
-                  >
+                  <Link className="animated" to={sliderData.url}>
                     MORE OFFER
                   </Link>
                 </div>

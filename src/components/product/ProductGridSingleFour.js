@@ -15,7 +15,7 @@ const ProductGridSingleFour = ({
   wishlistItem,
   compareItem,
   sliderClassName,
-  spaceBottomClass
+  spaceBottomClass,
 }) => {
   const [modalShow, setModalShow] = useState(false);
   const { addToast } = useToasts();
@@ -39,12 +39,8 @@ const ProductGridSingleFour = ({
           }`}
         >
           <div className="product-img">
-            <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
-              <img
-                className="default-img"
-                src={process.env.PUBLIC_URL + product.image[0]}
-                alt=""
-              />
+            <Link to={"/product/" + product.id}>
+              <img className="default-img" src={product.image[0]} alt="" />
             </Link>
             {product.discount || product.new ? (
               <div className="product-img-badges">
@@ -139,9 +135,7 @@ const ProductGridSingleFour = ({
           </div>
           <div className="product-content-5 text-center">
             <h3>
-              <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
-                {product.name}
-              </Link>
+              <Link to={"/product/" + product.id}>{product.name}</Link>
             </h3>
             <div className="price-5">
               {discountedPrice !== null ? (
@@ -189,7 +183,7 @@ ProductGridSingleFour.propTypes = {
   product: PropTypes.object,
   sliderClassName: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  wishlistItem: PropTypes.object
+  wishlistItem: PropTypes.object,
 };
 
 export default ProductGridSingleFour;

@@ -26,7 +26,7 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
     spaceBetween: 10,
     loopedSlides: 4,
     loop: true,
-    effect: "fade"
+    effect: "fade",
   };
 
   const thumbnailSwiperParams = {
@@ -41,25 +41,25 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
     breakpoints: {
       1200: {
         slidesPerView: 4,
-        direction: "vertical"
+        direction: "vertical",
       },
       992: {
         slidesPerView: 4,
-        direction: "horizontal"
+        direction: "horizontal",
       },
       768: {
         slidesPerView: 4,
-        direction: "horizontal"
+        direction: "horizontal",
       },
       640: {
         slidesPerView: 4,
-        direction: "horizontal"
+        direction: "horizontal",
       },
       320: {
         slidesPerView: 4,
-        direction: "horizontal"
-      }
-    }
+        direction: "horizontal",
+      },
+    },
   };
 
   return (
@@ -73,7 +73,7 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
           }`}
         >
           <div className="product-large-image-wrapper">
-            {product.discount || product.new ? (
+            {/* {product.discount || product.new ? (
               <div className="product-img-badges">
                 {product.discount ? (
                   <span className="pink">-{product.discount}%</span>
@@ -84,8 +84,17 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
               </div>
             ) : (
               ""
-            )}
-            <LightgalleryProvider>
+            )} */}
+            <div className="single-image">
+              <img
+                src={
+                  "https://public.nftstatic.com/static/nft/res/nft-cex/S3/1668419662210_16waqaopmvsodnkml7ui6par4b7m2gup.png"
+                }
+                className="img-fluid"
+                alt=""
+              />
+            </div>
+            {/* <LightgalleryProvider>
               <Swiper {...gallerySwiperParams}>
                 {product.image &&
                   product.image.map((single, key) => {
@@ -93,27 +102,21 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
                       <div key={key}>
                         <LightgalleryItem
                           group="any"
-                          src={process.env.PUBLIC_URL + single}
+                          src={single}
                         >
                           <button>
                             <i className="pe-7s-expand1"></i>
                           </button>
                         </LightgalleryItem>
-                        <div className="single-image">
-                          <img
-                            src={process.env.PUBLIC_URL + single}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </div>
+                        
                       </div>
                     );
                   })}
               </Swiper>
-            </LightgalleryProvider>
+            </LightgalleryProvider> */}
           </div>
         </div>
-        <div
+        {/* <div
           className={` ${
             thumbPosition && thumbPosition === "left"
               ? "col-xl-2 order-2 order-xl-1"
@@ -128,7 +131,7 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
                     <div key={key}>
                       <div className="single-image">
                         <img
-                          src={process.env.PUBLIC_URL + single}
+                          src={single}
                           className="img-fluid"
                           alt=""
                         />
@@ -138,7 +141,7 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
                 })}
             </Swiper>
           </div>
-        </div>
+        </div> */}
       </div>
     </Fragment>
   );
@@ -146,7 +149,7 @@ const ProductImageGalleryLeftThumb = ({ product, thumbPosition }) => {
 
 ProductImageGalleryLeftThumb.propTypes = {
   product: PropTypes.object,
-  thumbPosition: PropTypes.string
+  thumbPosition: PropTypes.string,
 };
 
 export default ProductImageGalleryLeftThumb;

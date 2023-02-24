@@ -9,14 +9,14 @@ const CountDownFive = ({
   spaceBottomClass,
   bgImg,
   image,
-  dateTime
+  dateTime,
 }) => {
   return (
     <div
       className={`funfact-area ${spaceTopClass ? spaceTopClass : ""} ${
         spaceBottomClass ? spaceBottomClass : ""
       }`}
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL + bgImg})` }}
+      style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="container">
         <div className="row align-items-center">
@@ -27,19 +27,13 @@ const CountDownFive = ({
                 <Countdown date={new Date(dateTime)} renderer={Renderer} />
               </div>
               <div className="funfact-btn funfact-btn-brown btn-hover">
-                <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-                  SHOP NOW
-                </Link>
+                <Link to={"/shop-grid-standard"}>SHOP NOW</Link>
               </div>
             </div>
           </div>
           <div className="col-lg-6">
             <div className="funfact-image text-center text-lg-right">
-              <img
-                src={process.env.PUBLIC_URL + image}
-                alt=""
-                className="img-fluid"
-              />
+              <img src={image} alt="" className="img-fluid" />
             </div>
           </div>
         </div>
@@ -53,7 +47,7 @@ CountDownFive.propTypes = {
   image: PropTypes.string,
   dateTime: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CountDownFive;

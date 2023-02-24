@@ -9,9 +9,7 @@ const CtaTwo = ({ spaceTopClass, spaceBottomClass }) => {
         spaceBottomClass ? spaceBottomClass : ""
       }`}
       style={{
-        backgroundImage: `url(${
-          process.env.PUBLIC_URL + "/assets/img/bg/cta-bg.jpg"
-        })`
+        backgroundImage: `url(${"/assets/img/bg/cta-bg.jpg"})`,
       }}
     >
       <div className="container">
@@ -24,10 +22,7 @@ const CtaTwo = ({ spaceTopClass, spaceBottomClass }) => {
               <p className="text">
                 All Products Sale Up To <span>40% Off</span>
               </p>
-              <Link
-                className="cta-btn"
-                to={process.env.PUBLIC_URL + "/shop-grid-standard"}
-              >
+              <Link className="cta-btn" to={"/shop-grid-standard"}>
                 SHOP NOW
               </Link>
             </div>
@@ -40,7 +35,7 @@ const CtaTwo = ({ spaceTopClass, spaceBottomClass }) => {
 
 CtaTwo.propTypes = {
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CtaTwo;

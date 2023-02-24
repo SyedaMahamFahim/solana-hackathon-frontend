@@ -7,16 +7,12 @@ const CategoryFiveSingle = ({ data }) => {
     <div className="col-lg-4 col-md-6 mb-30">
       <div className="category-grid">
         <div className="category-grid__image">
-          <Link to={process.env.PUBLIC_URL + data.url}>
-            <img
-              src={process.env.PUBLIC_URL + data.image}
-              alt=""
-              className="img-fluid"
-            />
+          <Link to={data.url}>
+            <img src={data.image} alt="" className="img-fluid" />
           </Link>
         </div>
         <div className="category-grid__content">
-          <Link to={process.env.PUBLIC_URL + data.url}>{data.title}</Link>
+          <Link to={data.url}>{data.title}</Link>
         </div>
       </div>
     </div>
@@ -24,7 +20,7 @@ const CategoryFiveSingle = ({ data }) => {
 };
 
 CategoryFiveSingle.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };
 
 export default CategoryFiveSingle;

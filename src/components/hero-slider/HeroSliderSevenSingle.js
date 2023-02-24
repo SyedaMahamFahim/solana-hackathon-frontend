@@ -9,7 +9,7 @@ const HeroSliderSevenSingle = ({ data, sliderClass }) => {
         sliderClass ? sliderClass : ""
       }`}
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + data.image})`
+        backgroundImage: `url(${data.image})`,
       }}
     >
       <div className="slider-content-7 slider-animated-1 ml-70">
@@ -30,7 +30,7 @@ const HeroSliderSevenSingle = ({ data, sliderClass }) => {
 
 HeroSliderSevenSingle.propTypes = {
   data: PropTypes.object,
-  sliderClass: PropTypes.string
+  sliderClass: PropTypes.string,
 };
 
 export default HeroSliderSevenSingle;

@@ -8,7 +8,7 @@ const CountDownEight = ({
   backgroundImage,
   dateTime,
   spaceTopClass,
-  spaceBottomClass
+  spaceBottomClass,
 }) => {
   return (
     <div
@@ -16,7 +16,7 @@ const CountDownEight = ({
         spaceTopClass ? spaceTopClass : ""
       } ${spaceBottomClass ? spaceBottomClass : ""}`}
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + backgroundImage})`
+        backgroundImage: `url(${backgroundImage})`,
       }}
     >
       <div className="container">
@@ -28,9 +28,7 @@ const CountDownEight = ({
                 <Countdown date={new Date(dateTime)} renderer={Renderer} />
               </div>
               <div className="funfact-btn btn-only-round funfact-btn-red-2 btn-hover">
-                <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-                  SHOP NOW
-                </Link>
+                <Link to={"/shop-grid-standard"}>SHOP NOW</Link>
               </div>
             </div>
           </div>
@@ -44,7 +42,7 @@ CountDownEight.propTypes = {
   backgroundImage: PropTypes.string,
   dateTime: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CountDownEight;

@@ -9,15 +9,13 @@ const CtaOne = ({ spaceTopClass, backgroundImage }) => {
         <div
           className="bg-img pt-100 pb-100"
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + backgroundImage})`
+            backgroundImage: `url(${backgroundImage})`,
           }}
         >
           <div className="save-money-content">
             <h2>Shop and save money</h2>
             <div className="save-money-btn">
-              <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-                Buy $97.09
-              </Link>
+              <Link to={"/shop-grid-standard"}>Buy $97.09</Link>
             </div>
           </div>
         </div>
@@ -28,7 +26,7 @@ const CtaOne = ({ spaceTopClass, backgroundImage }) => {
 
 CtaOne.propTypes = {
   backgroundImage: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CtaOne;

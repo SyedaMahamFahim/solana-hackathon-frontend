@@ -17,10 +17,7 @@ const HeroSliderThirteenSingle = ({ data, sliderClassName }) => {
               <h1 className="animated">{data.subtitle}</h1>
               <p className="animated">{data.text}</p>
               <div className="slider-btn btn-hover">
-                <Link
-                  className="animated"
-                  to={process.env.PUBLIC_URL + data.url}
-                >
+                <Link className="animated" to={data.url}>
                   SHOP NOW
                 </Link>
               </div>
@@ -28,13 +25,9 @@ const HeroSliderThirteenSingle = ({ data, sliderClassName }) => {
           </div>
           <div className="col-xl-5 col-lg-5 col-md-6 col-12 col-sm-6">
             <div className="single-slider-img4 slider-animated-1">
-              <img
-                className="animated img-fluid"
-                src={process.env.PUBLIC_URL + data.image}
-                alt=""
-              />
+              <img className="animated img-fluid" src={data.image} alt="" />
               <div className="single-price-wrap">
-                <img src={process.env.PUBLIC_URL + data.shapeImage} alt="" />
+                <img src={data.shapeImage} alt="" />
                 <div className="single-price">
                   <span>{data.shapeTitle}</span>
                   <span className="dollar">{data.shapeSubtitle}</span>
@@ -50,7 +43,7 @@ const HeroSliderThirteenSingle = ({ data, sliderClassName }) => {
 
 HeroSliderThirteenSingle.propTypes = {
   data: PropTypes.object,
-  sliderClassName: PropTypes.string
+  sliderClassName: PropTypes.string,
 };
 
 export default HeroSliderThirteenSingle;

@@ -10,17 +10,15 @@ const TestimonialThree = () => {
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
-    }
+      disableOnInteraction: false,
+    },
   };
 
   return (
     <div
       className="testimonial-area bg-img mt-195"
       style={{
-        backgroundImage: `url(${
-          process.env.PUBLIC_URL + "/assets/img/bg/testimonial-bg-2.jpg"
-        })`
+        backgroundImage: `url(${"/assets/img/bg/testimonial-bg-2.jpg"})`,
       }}
     >
       <div className="container">
@@ -45,9 +43,7 @@ const TestimonialThree = () => {
             <div className="testimonial-img-2">
               <img
                 className="wow fadeInUp"
-                src={
-                  process.env.PUBLIC_URL + "/assets/img/testimonial/testi-2.png"
-                }
+                src={"/assets/img/testimonial/testi-2.png"}
                 alt=""
               />
             </div>

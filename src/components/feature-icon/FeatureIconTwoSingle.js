@@ -10,11 +10,7 @@ const FeatureIconTwoSingle = ({ data, spaceBottomClass, textAlignClass }) => {
         } ${textAlignClass ? textAlignClass : ""}`}
       >
         <div className="support-content-2">
-          <img
-            className="animated"
-            src={process.env.PUBLIC_URL + data.image}
-            alt=""
-          />
+          <img className="animated" src={data.image} alt="" />
           <h5>{data.title}</h5>
           <p>{data.subtitle}</p>
         </div>
@@ -26,7 +22,7 @@ const FeatureIconTwoSingle = ({ data, spaceBottomClass, textAlignClass }) => {
 FeatureIconTwoSingle.propTypes = {
   data: PropTypes.object,
   spaceBottomClass: PropTypes.string,
-  textAlignClass: PropTypes.string
+  textAlignClass: PropTypes.string,
 };
 
 export default FeatureIconTwoSingle;

@@ -10,7 +10,7 @@ const TabProductThirteen = ({
   spaceTopClass,
   spaceBottomClass,
   bgColorClass,
-  category
+  category,
 }) => {
   return (
     <div
@@ -79,10 +79,7 @@ const TabProductThirteen = ({
           </Tab.Content>
         </Tab.Container>
         <div className="view-more round-btn text-center mt-20 toggle-btn6 col-12">
-          <Link
-            className="loadMore6"
-            to={process.env.PUBLIC_URL + "/shop-grid-standard"}
-          >
+          <Link className="loadMore6" to={"/shop-grid-standard"}>
             Discover More
           </Link>
         </div>
@@ -95,7 +92,7 @@ TabProductThirteen.propTypes = {
   bgColorClass: PropTypes.string,
   category: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default TabProductThirteen;

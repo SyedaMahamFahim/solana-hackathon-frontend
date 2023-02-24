@@ -8,11 +8,7 @@ const TeamMemberOneSingle = ({ data, spaceBottomClass }) => {
         className={`team-wrapper ${spaceBottomClass ? spaceBottomClass : ""}`}
       >
         <div className="team-img">
-          <img
-            src={process.env.PUBLIC_URL + data.image}
-            alt=""
-            className="img-fluid"
-          />
+          <img src={data.image} alt="" className="img-fluid" />
           <div className="team-action">
             <a
               className="facebook"
@@ -51,7 +47,7 @@ const TeamMemberOneSingle = ({ data, spaceBottomClass }) => {
 
 TeamMemberOneSingle.propTypes = {
   data: PropTypes.object,
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default TeamMemberOneSingle;

@@ -8,9 +8,7 @@ const HeroSliderThirtyFour = () => {
       <div
         className="slider-height-5 bg-img d-flex align-items-center"
         style={{
-          backgroundImage: `url(${
-            process.env.PUBLIC_URL + sliderData.backgroundImage
-          })`
+          backgroundImage: `url(${sliderData.backgroundImage})`,
         }}
       >
         <div className="container">
@@ -21,10 +19,7 @@ const HeroSliderThirtyFour = () => {
                 <h1 className="animated">{sliderData.subtitle}</h1>
                 <p className="animated">{sliderData.text}</p>
                 <div className="slider-btn btn-hover">
-                  <Link
-                    className="animated"
-                    to={process.env.PUBLIC_URL + sliderData.url}
-                  >
+                  <Link className="animated" to={sliderData.url}>
                     SHOP NOW
                   </Link>
                 </div>

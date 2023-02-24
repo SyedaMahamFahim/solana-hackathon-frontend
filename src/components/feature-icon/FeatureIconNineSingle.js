@@ -11,14 +11,10 @@ const FeatureIconNineSingle = ({ data, spaceBottomClass }) => {
         style={{ backgroundColor: `${data.backgroundColor}` }}
       >
         <div className="support-icon-2">
-          <img
-            className="animated"
-            src={process.env.PUBLIC_URL + data.iconImage}
-            alt=""
-          />
+          <img className="animated" src={data.iconImage} alt="" />
         </div>
         <div className="support-content-3 support-content-3-white">
-          <img src={process.env.PUBLIC_URL + data.titleImage} alt="" />
+          <img src={data.titleImage} alt="" />
           <p>{data.title}</p>
         </div>
       </div>
@@ -28,7 +24,7 @@ const FeatureIconNineSingle = ({ data, spaceBottomClass }) => {
 
 FeatureIconNineSingle.propTypes = {
   data: PropTypes.object,
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default FeatureIconNineSingle;

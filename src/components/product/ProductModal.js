@@ -59,7 +59,7 @@ function ProductModal(props) {
     getSwiper: getGallerySwiper,
     spaceBetween: 10,
     loopedSlides: 4,
-    loop: true
+    loop: true,
   };
 
   const thumbnailSwiperParams = {
@@ -73,7 +73,7 @@ function ProductModal(props) {
     slideToClickedSlide: true,
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      prevEl: ".swiper-button-prev",
     },
     renderPrevButton: () => (
       <button className="swiper-button-prev ht-swiper-button-nav">
@@ -84,7 +84,7 @@ function ProductModal(props) {
       <button className="swiper-button-next ht-swiper-button-nav">
         <i className="pe-7s-angle-right" />
       </button>
-    )
+    ),
   };
 
   return (
@@ -106,11 +106,7 @@ function ProductModal(props) {
                       return (
                         <div key={key}>
                           <div className="single-image">
-                            <img
-                              src={process.env.PUBLIC_URL + single}
-                              className="img-fluid"
-                              alt=""
-                            />
+                            <img src={single} className="img-fluid" alt="" />
                           </div>
                         </div>
                       );
@@ -124,11 +120,7 @@ function ProductModal(props) {
                       return (
                         <div key={key}>
                           <div className="single-image">
-                            <img
-                              src={process.env.PUBLIC_URL + single}
-                              className="img-fluid"
-                              alt=""
-                            />
+                            <img src={single} className="img-fluid" alt="" />
                           </div>
                         </div>
                       );
@@ -203,7 +195,7 @@ function ProductModal(props) {
                       <span>Size</span>
                       <div className="pro-details-size-content">
                         {product.variation &&
-                          product.variation.map(single => {
+                          product.variation.map((single) => {
                             return single.color === selectedProductColor
                               ? single.size.map((singleSize, key) => {
                                   return (
@@ -360,12 +352,12 @@ ProductModal.propTypes = {
   onHide: PropTypes.func,
   product: PropTypes.object,
   show: PropTypes.bool,
-  wishlistitem: PropTypes.object
+  wishlistitem: PropTypes.object,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    cartitems: state.cartData
+    cartitems: state.cartData,
   };
 };
 

@@ -4,7 +4,7 @@ import React from "react";
 const FeatureIconThreeSingle = ({
   data,
   spaceBottomClass,
-  featureShapeClass
+  featureShapeClass,
 }) => {
   return (
     <div className="col-lg-4 col-md-4 col-sm-6">
@@ -14,11 +14,7 @@ const FeatureIconThreeSingle = ({
         } ${spaceBottomClass ? spaceBottomClass : ""}`}
       >
         <div className="support-content-2">
-          <img
-            className="animated"
-            src={process.env.PUBLIC_URL + data.image}
-            alt=""
-          />
+          <img className="animated" src={data.image} alt="" />
           <h5>{data.title}</h5>
           <p>{data.subtitle}</p>
         </div>
@@ -30,7 +26,7 @@ const FeatureIconThreeSingle = ({
 FeatureIconThreeSingle.propTypes = {
   data: PropTypes.object,
   featureShapeClass: PropTypes.string,
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default FeatureIconThreeSingle;

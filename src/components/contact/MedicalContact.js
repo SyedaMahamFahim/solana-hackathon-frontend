@@ -5,9 +5,7 @@ const MedicalContact = () => {
     <div
       className="medical-contact-area bg-img"
       style={{
-        backgroundImage: `url(${
-          process.env.PUBLIC_URL + "/assets/img/bg/medicine-bg.jpg"
-        })`
+        backgroundImage: `url(${"/assets/img/bg/medicine-bg.jpg"})`,
       }}
     >
       <div className="container">

@@ -8,9 +8,7 @@ const HeroSliderThirty = () => {
       <div
         className="single-slide bg-img"
         style={{
-          backgroundImage: `url(${
-            process.env.PUBLIC_URL + sliderData.backgroundImage
-          })`
+          backgroundImage: `url(${sliderData.backgroundImage})`,
         }}
       >
         <div className="container">
@@ -19,10 +17,7 @@ const HeroSliderThirty = () => {
               <div className="single-slide__content">
                 <h2 className="title">{sliderData.title}</h2>
                 <h4 className="subtitle">{sliderData.subtitle}</h4>
-                <Link
-                  className="button"
-                  to={process.env.PUBLIC_URL + sliderData.url}
-                >
+                <Link className="button" to={sliderData.url}>
                   Shop Now
                 </Link>
               </div>

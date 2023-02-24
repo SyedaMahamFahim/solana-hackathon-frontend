@@ -12,9 +12,7 @@ const VideoPopup = ({ spaceBottomClass }) => {
           <div className="col-lg-6">
             <div className="video-popup__image">
               <img
-                src={
-                  process.env.PUBLIC_URL + "/assets/img/banner/banner-41.jpg"
-                }
+                src={"/assets/img/banner/banner-41.jpg"}
                 alt=""
                 className="img-fluid"
               />
@@ -30,9 +28,7 @@ const VideoPopup = ({ spaceBottomClass }) => {
                 eiusmod tempor incididunt.
               </p>
               <div className="link mb-30">
-                <Link to={process.env.PUBLIC_URL + "/about"}>
-                  More About Us
-                </Link>
+                <Link to={"/about"}>More About Us</Link>
               </div>
               <ModalVideo
                 channel="youtube"
@@ -52,7 +48,7 @@ const VideoPopup = ({ spaceBottomClass }) => {
 };
 
 VideoPopup.propTypes = {
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default VideoPopup;

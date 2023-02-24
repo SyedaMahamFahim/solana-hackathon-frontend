@@ -3,8 +3,8 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
-import LayoutOne from "../../layouts/LayoutOne";
-import Breadcrumb from "../../wrappers/breadcrumb/Breadcrumb";
+import Layout from "../layouts/Layout";
+import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 
 const NotFound = ({ location }) => {
   const { pathname } = location;
@@ -18,11 +18,9 @@ const NotFound = ({ location }) => {
           content="404 page of flone react minimalist eCommerce template."
         />
       </MetaTags>
-      <BreadcrumbsItem to={process.env.PUBLIC_URL + "/"}>Home</BreadcrumbsItem>
-      <BreadcrumbsItem to={process.env.PUBLIC_URL + pathname}>
-        404 page
-      </BreadcrumbsItem>
-      <LayoutOne headerTop="visible">
+      <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
+      <BreadcrumbsItem to={pathname}>404 page</BreadcrumbsItem>
+      <Layout headerTop="visible">
         {/* breadcrumb */}
         <Breadcrumb />
         <div className="error-area pt-40 pb-100">
@@ -48,7 +46,7 @@ const NotFound = ({ location }) => {
                       <i className="fa fa-search" />
                     </button>
                   </form>
-                  <Link to={process.env.PUBLIC_URL + "/"} className="error-btn">
+                  <Link to={"/"} className="error-btn">
                     Back to home page
                   </Link>
                 </div>
@@ -56,13 +54,13 @@ const NotFound = ({ location }) => {
             </div>
           </div>
         </div>
-      </LayoutOne>
+      </Layout>
     </Fragment>
   );
 };
 
 NotFound.propTypes = {
-  location: PropTypes.object
+  location: PropTypes.object,
 };
 
 export default NotFound;

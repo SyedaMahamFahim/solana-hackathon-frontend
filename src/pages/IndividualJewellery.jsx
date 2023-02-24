@@ -1,12 +1,12 @@
 import React from "react";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
-import LayoutOne from "../layouts/LayoutOne";
+import Layout from "../layouts/Layout";
 import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
 import ProductGrid from "../wrappers/product/ProductGrid";
 import { nftsData } from "../data";
-const IndividualJewellery = ({location}) => {
+const IndividualJewellery = ({ location }) => {
   const { pathname } = location;
 
   return (
@@ -20,7 +20,7 @@ const IndividualJewellery = ({location}) => {
       </MetaTags>
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={pathname}>Stones</BreadcrumbsItem>
-      <LayoutOne headerTop="visible">
+      <Layout headerTop="visible">
         {/* breadcrumb */}
         <Breadcrumb />
 
@@ -42,7 +42,7 @@ const IndividualJewellery = ({location}) => {
           </div>
         </div>
         {/* <TabProduct spaceBottomClass="pb-60" category="fashion" /> */}
-      </LayoutOne>
+      </Layout>
     </>
   );
 };

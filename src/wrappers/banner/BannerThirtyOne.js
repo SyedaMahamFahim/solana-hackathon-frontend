@@ -9,11 +9,9 @@ const BannerThirtyOne = ({ spaceBottomClass }) => {
         <div className="row">
           <div className="col-lg-6 pb-30">
             <div className="single-banner-3">
-              <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
+              <Link to={"/shop-grid-standard"}>
                 <img
-                  src={
-                    process.env.PUBLIC_URL + "/assets/img/banner/banner-46.jpg"
-                  }
+                  src={"/assets/img/banner/banner-46.jpg"}
                   alt=""
                   className="img-fluid"
                 />
@@ -22,19 +20,15 @@ const BannerThirtyOne = ({ spaceBottomClass }) => {
                 <h4>
                   Up To 40% Off <br /> All New Products
                 </h4>
-                <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-                  Shop Now
-                </Link>
+                <Link to={"/shop-grid-standard"}>Shop Now</Link>
               </div>
             </div>
           </div>
           <div className="col-lg-6 pb-30">
             <div className="single-banner-3">
-              <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
+              <Link to={"/shop-grid-standard"}>
                 <img
-                  src={
-                    process.env.PUBLIC_URL + "/assets/img/banner/banner-47.jpg"
-                  }
+                  src={"/assets/img/banner/banner-47.jpg"}
                   alt=""
                   className="img-fluid"
                 />
@@ -43,9 +37,7 @@ const BannerThirtyOne = ({ spaceBottomClass }) => {
                 <h4>
                   Free Shipping & <br /> The Best Items Granted
                 </h4>
-                <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-                  Shop Now
-                </Link>
+                <Link to={"/shop-grid-standard"}>Shop Now</Link>
               </div>
             </div>
           </div>
@@ -56,7 +48,7 @@ const BannerThirtyOne = ({ spaceBottomClass }) => {
 };
 
 BannerThirtyOne.propTypes = {
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default BannerThirtyOne;

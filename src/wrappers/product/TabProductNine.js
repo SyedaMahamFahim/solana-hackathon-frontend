@@ -11,7 +11,7 @@ const TabProductNine = ({
   spaceBottomClass,
   category,
   containerClass,
-  extraClass
+  extraClass,
 }) => {
   return (
     <div
@@ -77,10 +77,7 @@ const TabProductNine = ({
           </Tab.Content>
         </Tab.Container>
         <div className="view-more round-btn text-center mt-20 toggle-btn6 col-12">
-          <Link
-            className="loadMore6"
-            to={process.env.PUBLIC_URL + "/shop-grid-standard"}
-          >
+          <Link className="loadMore6" to={"/shop-grid-standard"}>
             Discover More
           </Link>
         </div>
@@ -94,7 +91,7 @@ TabProductNine.propTypes = {
   containerClass: PropTypes.string,
   extraClass: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default TabProductNine;

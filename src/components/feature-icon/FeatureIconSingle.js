@@ -6,11 +6,7 @@ const FeatureIconSingle = ({ singleFeature }) => {
     <div className="col-lg-3 col-sm-6">
       <div className="support-wrap mb-30">
         <div className="support-icon">
-          <img
-            className="animated"
-            src={process.env.PUBLIC_URL + singleFeature.image}
-            alt=""
-          />
+          <img className="animated" src={singleFeature.image} alt="" />
         </div>
         <div className="support-content">
           <h5>{singleFeature.title}</h5>
@@ -22,7 +18,7 @@ const FeatureIconSingle = ({ singleFeature }) => {
 };
 
 FeatureIconSingle.propTypes = {
-  singleFeature: PropTypes.object
+  singleFeature: PropTypes.object,
 };
 
 export default FeatureIconSingle;

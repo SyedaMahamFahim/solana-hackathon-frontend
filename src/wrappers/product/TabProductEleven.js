@@ -13,7 +13,7 @@ const TabProductEleven = ({
   category,
   sectionTitle,
   bgShape,
-  colorClass
+  colorClass,
 }) => {
   const [swiper, updateSwiper] = useState(null);
   const [swiper2, updateSwiper2] = useState(null);
@@ -26,18 +26,18 @@ const TabProductEleven = ({
     observeParents: true,
     breakpoints: {
       1024: {
-        slidesPerView: 4
+        slidesPerView: 4,
       },
       768: {
-        slidesPerView: 3
+        slidesPerView: 3,
       },
       640: {
-        slidesPerView: 2
+        slidesPerView: 2,
       },
       320: {
-        slidesPerView: 1
-      }
-    }
+        slidesPerView: 1,
+      },
+    },
   };
 
   const goNext = () => {
@@ -197,10 +197,7 @@ const TabProductEleven = ({
       </div>
       {bgShape ? (
         <div className="bg-png-1">
-          <img
-            src={process.env.PUBLIC_URL + "/assets/img/bg/shape-2.png"}
-            alt=""
-          />
+          <img src={"/assets/img/bg/shape-2.png"} alt="" />
         </div>
       ) : (
         ""
@@ -216,7 +213,7 @@ TabProductEleven.propTypes = {
   category: PropTypes.string,
   sectionTitle: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default TabProductEleven;

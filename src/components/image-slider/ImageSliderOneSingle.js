@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const ImageSliderOneSingle = ({ data, sliderClass }) => {
   return (
     <div className={`single-image ${sliderClass ? sliderClass : ""}`}>
-      <Link to={process.env.PUBLIC_URL + data.link}>
-        <img src={process.env.PUBLIC_URL + data.image} alt="" />
+      <Link to={data.link}>
+        <img src={data.image} alt="" />
       </Link>
     </div>
   );
@@ -14,7 +14,7 @@ const ImageSliderOneSingle = ({ data, sliderClass }) => {
 
 ImageSliderOneSingle.propTypes = {
   data: PropTypes.object,
-  sliderClass: PropTypes.string
+  sliderClass: PropTypes.string,
 };
 
 export default ImageSliderOneSingle;

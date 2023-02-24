@@ -10,7 +10,7 @@ const FeatureIconNine = ({
   gutterClass,
   responsiveClass,
   bgImg,
-  bgColorClass
+  bgColorClass,
 }) => {
   return (
     <div
@@ -19,11 +19,7 @@ const FeatureIconNine = ({
       } ${spaceTopClass ? spaceTopClass : ""} ${
         spaceBottomClass ? spaceBottomClass : ""
       } ${responsiveClass ? responsiveClass : ""}`}
-      style={
-        bgImg
-          ? { backgroundImage: `url(${process.env.PUBLIC_URL + bgImg})` }
-          : {}
-      }
+      style={bgImg ? { backgroundImage: `url(${bgImg})` } : {}}
     >
       <div
         className={`${containerClass ? containerClass : ""} ${
@@ -54,7 +50,7 @@ FeatureIconNine.propTypes = {
   responsiveClass: PropTypes.string,
   spaceBottomClass: PropTypes.string,
   spaceTopClass: PropTypes.string,
-  bgColorClass: PropTypes.string
+  bgColorClass: PropTypes.string,
 };
 
 export default FeatureIconNine;

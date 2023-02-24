@@ -2,10 +2,10 @@ import React from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import { PropTypes } from "prop-types";
 
-const FooterMap = props => {
+const FooterMap = (props) => {
   const mapStyles = {
     width: "100%",
-    height: "100%"
+    height: "100%",
   };
 
   return (
@@ -18,7 +18,7 @@ const FooterMap = props => {
       <Marker
         position={{ lat: props.latitude, lng: props.longitude }}
         icon={{
-          url: `${process.env.PUBLIC_URL + "/assets/img/icon-img/2.png"}`
+          url: `${"/assets/img/icon-img/2.png"}`,
         }}
         animation={props.google.maps.Animation.BOUNCE}
       />
@@ -29,9 +29,9 @@ const FooterMap = props => {
 FooterMap.propTypes = {
   google: PropTypes.object,
   latitude: PropTypes.string,
-  longitude: PropTypes.string
+  longitude: PropTypes.string,
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyB2D8wrWMY3XZnuHO6C31uq90JiuaFzGws"
+  apiKey: "AIzaSyB2D8wrWMY3XZnuHO6C31uq90JiuaFzGws",
 })(FooterMap);

@@ -10,7 +10,7 @@ const CountDownOne = ({ spaceTopClass, spaceBottomClass, bgImg, dateTime }) => {
       className={`funfact-area ${spaceTopClass ? spaceTopClass : ""} ${
         spaceBottomClass ? spaceBottomClass : ""
       }`}
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL + bgImg})` }}
+      style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="container">
         <div className="row">
@@ -21,9 +21,7 @@ const CountDownOne = ({ spaceTopClass, spaceBottomClass, bgImg, dateTime }) => {
                 <Countdown date={new Date(dateTime)} renderer={Renderer} />
               </div>
               <div className="funfact-btn btn-hover">
-                <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-                  SHOP NOW
-                </Link>
+                <Link to={"/shop-grid-standard"}>SHOP NOW</Link>
               </div>
             </div>
           </div>
@@ -37,7 +35,7 @@ CountDownOne.propTypes = {
   bgImg: PropTypes.string,
   dateTime: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CountDownOne;

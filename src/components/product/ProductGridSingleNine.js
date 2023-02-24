@@ -16,7 +16,7 @@ const ProductGridSingleNine = ({
   compareItem,
   sliderClassName,
   spaceBottomClass,
-  colorClass
+  colorClass,
 }) => {
   const [modalShow, setModalShow] = useState(false);
   const { addToast } = useToasts();
@@ -40,18 +40,10 @@ const ProductGridSingleNine = ({
           } ${colorClass ? colorClass : ""} `}
         >
           <div className="product-img">
-            <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
-              <img
-                className="default-img"
-                src={process.env.PUBLIC_URL + product.image[0]}
-                alt=""
-              />
+            <Link to={"/product/" + product.id}>
+              <img className="default-img" src={product.image[0]} alt="" />
               {product.image.length > 1 ? (
-                <img
-                  className="hover-img"
-                  src={process.env.PUBLIC_URL + product.image[1]}
-                  alt=""
-                />
+                <img className="hover-img" src={product.image[1]} alt="" />
               ) : (
                 ""
               )}
@@ -129,9 +121,7 @@ const ProductGridSingleNine = ({
           <div className="product-content-2">
             <div className="title-price-wrap-2">
               <h3>
-                <Link to={process.env.PUBLIC_URL + "/product/" + product.id}>
-                  {product.name}
-                </Link>
+                <Link to={"/product/" + product.id}>{product.name}</Link>
               </h3>
               <div className="price-2">
                 {discountedPrice !== null ? (
@@ -197,7 +187,7 @@ ProductGridSingleNine.propTypes = {
   sliderClassName: PropTypes.string,
   spaceBottomClass: PropTypes.string,
   colorClass: PropTypes.string,
-  wishlistItem: PropTypes.object
+  wishlistItem: PropTypes.object,
 };
 
 export default ProductGridSingleNine;

@@ -8,7 +8,7 @@ const CountDownThree = ({
   spaceTopClass,
   spaceBottomClass,
   dateTime,
-  countDownImage
+  countDownImage,
 }) => {
   return (
     <div
@@ -25,20 +25,14 @@ const CountDownThree = ({
                 <Countdown date={new Date(dateTime)} renderer={Renderer} />
               </div>
               <div className="funfact-btn funfact-btn--round-shape funfact-btn-red btn-hover">
-                <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-                  SHOP NOW
-                </Link>
+                <Link to={"/shop-grid-standard"}>SHOP NOW</Link>
               </div>
             </div>
           </div>
           <div className="col-md-4 col-lg-6 order-2 order-lg-1">
             <div className="funfact-image">
-              <Link to={process.env.PUBLIC_URL + "/shop-grid-standard"}>
-                <img
-                  src={process.env.PUBLIC_URL + countDownImage}
-                  alt=""
-                  className="img-fluid"
-                />
+              <Link to={"/shop-grid-standard"}>
+                <img src={countDownImage} alt="" className="img-fluid" />
               </Link>
             </div>
           </div>
@@ -52,7 +46,7 @@ CountDownThree.propTypes = {
   countDownImage: PropTypes.string,
   dateTime: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default CountDownThree;

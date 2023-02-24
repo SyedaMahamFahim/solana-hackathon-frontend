@@ -21,11 +21,7 @@ const productImageGallerySticky = ({ product }) => {
           product.image.map((single, key) => {
             return (
               <div className="product-sticky-image__single mb-10" key={key}>
-                <img
-                  src={process.env.PUBLIC_URL + single}
-                  alt=""
-                  className="img-fluid"
-                />
+                <img src={single} alt="" className="img-fluid" />
               </div>
             );
           })}
@@ -35,7 +31,7 @@ const productImageGallerySticky = ({ product }) => {
 };
 
 productImageGallerySticky.propTypes = {
-  product: PropTypes.object
+  product: PropTypes.object,
 };
 
 export default productImageGallerySticky;

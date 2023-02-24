@@ -26,7 +26,7 @@ const ProductImageGallery = ({ product }) => {
     spaceBetween: 10,
     loopedSlides: 4,
     loop: true,
-    effect: "fade"
+    effect: "fade",
   };
 
   const thumbnailSwiperParams = {
@@ -40,7 +40,7 @@ const ProductImageGallery = ({ product }) => {
     slideToClickedSlide: true,
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      prevEl: ".swiper-button-prev",
     },
     renderPrevButton: () => (
       <button className="swiper-button-prev ht-swiper-button-nav">
@@ -51,75 +51,28 @@ const ProductImageGallery = ({ product }) => {
       <button className="swiper-button-next ht-swiper-button-nav">
         <i className="pe-7s-angle-right" />
       </button>
-    )
+    ),
   };
 
   return (
     <Fragment>
       <div className="product-large-image-wrapper">
-        {product.discount || product.new ? (
-          <div className="product-img-badges">
-            {product.discount ? (
-              <span className="pink">-{product.discount}%</span>
-            ) : (
-              ""
-            )}
-            {product.new ? <span className="purple">New</span> : ""}
-          </div>
-        ) : (
-          ""
-        )}
-        <LightgalleryProvider>
-          <Swiper {...gallerySwiperParams}>
-            {product.image &&
-              product.image.map((single, key) => {
-                return (
-                  <div key={key}>
-                    <LightgalleryItem
-                      group="any"
-                      src={process.env.PUBLIC_URL + single}
-                    >
-                      <button>
-                        <i className="pe-7s-expand1"></i>
-                      </button>
-                    </LightgalleryItem>
-                    <div className="single-image">
-                      <img
-                        src={process.env.PUBLIC_URL + single}
-                        className="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                );
-              })}
-          </Swiper>
-        </LightgalleryProvider>
-      </div>
-      <div className="product-small-image-wrapper mt-15">
-        <Swiper {...thumbnailSwiperParams}>
-          {product.image &&
-            product.image.map((single, key) => {
-              return (
-                <div key={key}>
-                  <div className="single-image">
-                    <img
-                      src={process.env.PUBLIC_URL + single}
-                      className="img-fluid"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              );
-            })}
-        </Swiper>
+        <div className="single-image">
+          <img
+            src={
+              "https://public.nftstatic.com/static/nft/res/nft-cex/S3/1668419662210_16waqaopmvsodnkml7ui6par4b7m2gup.png"
+            }
+            className="img-fluid"
+            alt=""
+          />
+        </div>
       </div>
     </Fragment>
   );
 };
 
 ProductImageGallery.propTypes = {
-  product: PropTypes.object
+  product: PropTypes.object,
 };
 
 export default ProductImageGallery;

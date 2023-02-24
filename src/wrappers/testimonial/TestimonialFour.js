@@ -11,7 +11,7 @@ const TestimonialFour = ({
   spaceRightClass,
   bgColorClass,
   testimonialClass,
-  backgroundImage
+  backgroundImage,
 }) => {
   // swiper slider settings
   const settings = {
@@ -19,8 +19,8 @@ const TestimonialFour = ({
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
-    }
+      disableOnInteraction: false,
+    },
   };
 
   return (
@@ -31,9 +31,7 @@ const TestimonialFour = ({
             spaceBottomClass ? spaceBottomClass : ""
           }`}
           style={{
-            backgroundImage: `url(${
-              process.env.PUBLIC_URL + "/assets/img/bg/testimonial-bg-3.jpg"
-            })`
+            backgroundImage: `url(${"/assets/img/bg/testimonial-bg-3.jpg"})`,
           }}
         >
           <div className="row">
@@ -67,7 +65,7 @@ TestimonialFour.propTypes = {
   spaceLeftClass: PropTypes.string,
   spaceRightClass: PropTypes.string,
   spaceTopClass: PropTypes.string,
-  testimonialClass: PropTypes.string
+  testimonialClass: PropTypes.string,
 };
 
 export default TestimonialFour;

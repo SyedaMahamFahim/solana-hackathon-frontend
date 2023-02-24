@@ -8,7 +8,7 @@ const NewsletterFive = ({
   spaceLeftClass,
   spaceRightClass,
   subscribeBtnClass,
-  newsletterBg
+  newsletterBg,
 }) => {
   return (
     <div
@@ -18,7 +18,7 @@ const NewsletterFive = ({
         spaceLeftClass ? spaceLeftClass : ""
       }  ${spaceRightClass ? spaceRightClass : ""}`}
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + newsletterBg})`
+        backgroundImage: `url(${newsletterBg})`,
       }}
     >
       <div className="container-fluid">
@@ -46,7 +46,7 @@ NewsletterFive.propTypes = {
   spaceLeftClass: PropTypes.string,
   spaceRightClass: PropTypes.string,
   spaceTopClass: PropTypes.string,
-  newsletterBg: PropTypes.string
+  newsletterBg: PropTypes.string,
 };
 
 export default NewsletterFive;

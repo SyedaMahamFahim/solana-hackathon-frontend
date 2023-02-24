@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
-import LayoutOne from "../layouts/LayoutOne";
+import Layout from "../layouts/Layout";
 import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
 import ProductGrid from "../wrappers/product/ProductGrid";
@@ -16,7 +16,7 @@ import ShopProducts from "../wrappers/product/ShopProducts";
 
 import products from "../data/products.json";
 
-const DiamondsStones = ({ location}) => {
+const DiamondsStones = ({ location }) => {
   const [layout, setLayout] = useState("list");
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -30,7 +30,7 @@ const DiamondsStones = ({ location}) => {
   const pageLimit = 15;
   const { pathname } = location;
 
-  const getLayout = layout => {
+  const getLayout = (layout) => {
     setLayout(layout);
   };
 
@@ -67,7 +67,7 @@ const DiamondsStones = ({ location}) => {
       </MetaTags>
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={pathname}>Stones</BreadcrumbsItem>
-      <LayoutOne headerTop="visible">
+      <Layout headerTop="visible">
         {/* breadcrumb */}
         <Breadcrumb />
 
@@ -77,11 +77,10 @@ const DiamondsStones = ({ location}) => {
           spaceBottomClass="pb-55"
           isH5Required={false}
         />
-      
+
         <div className="shop-area pt-95 pb-100">
           <div className="container">
             <div className="row">
-             
               <div className="col-lg-12 order-1 order-lg-2">
                 {/* shop topbar default */}
                 <ShopTopbar
@@ -93,7 +92,7 @@ const DiamondsStones = ({ location}) => {
 
                 {/* shop page content default */}
                 <ShopProducts layout={layout} products={currentData} />
-               
+
                 {/* shop product pagination */}
                 <div className="pro-pagination-style text-center mt-30">
                   <Paginator
@@ -112,9 +111,9 @@ const DiamondsStones = ({ location}) => {
             </div>
           </div>
         </div>
-       
+
         {/* <TabProduct spaceBottomClass="pb-60" category="fashion" /> */}
-      </LayoutOne>
+      </Layout>
     </>
   );
 };

@@ -10,7 +10,7 @@ const TestimonialTwo = ({
   spaceLeftClass,
   spaceRightClass,
   bgColorClass,
-  backgroundImage
+  backgroundImage,
 }) => {
   // swiper slider settings
   const settings = {
@@ -18,8 +18,8 @@ const TestimonialTwo = ({
     loop: true,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false
-    }
+      disableOnInteraction: false,
+    },
   };
 
   return (
@@ -32,7 +32,7 @@ const TestimonialTwo = ({
         bgColorClass ? bgColorClass : ""
       } `}
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + backgroundImage})`
+        backgroundImage: `url(${backgroundImage})`,
       }}
     >
       <div className="container">
@@ -64,7 +64,7 @@ TestimonialTwo.propTypes = {
   spaceBottomClass: PropTypes.string,
   spaceLeftClass: PropTypes.string,
   spaceRightClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default TestimonialTwo;

@@ -10,15 +10,15 @@ const BannerTwelveSingle = ({ data, spaceBottomClass }) => {
           spaceBottomClass ? spaceBottomClass : ""
         }`}
       >
-        <Link to={process.env.PUBLIC_URL + data.link}>
-          <img src={process.env.PUBLIC_URL + data.image} alt="" />
+        <Link to={data.link}>
+          <img src={data.image} alt="" />
         </Link>
         <div className="banner-content-2 banner-content-2--style3">
           <h3>{data.title}</h3>
           <h4>
             {data.subtitle} <span>{data.price}</span>
           </h4>
-          <Link to={process.env.PUBLIC_URL + data.link}>
+          <Link to={data.link}>
             <i className="fa fa-long-arrow-right" />
           </Link>
         </div>
@@ -29,7 +29,7 @@ const BannerTwelveSingle = ({ data, spaceBottomClass }) => {
 
 BannerTwelveSingle.propTypes = {
   data: PropTypes.object,
-  spaceBottomClass: PropTypes.string
+  spaceBottomClass: PropTypes.string,
 };
 
 export default BannerTwelveSingle;

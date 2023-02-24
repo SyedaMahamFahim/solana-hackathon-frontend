@@ -3,12 +3,12 @@ import React, { Fragment } from "react";
 import HeaderOne from "../wrappers/header/HeaderOne";
 import FooterOne from "../wrappers/footer/FooterOne";
 
-const LayoutOne = ({
+const Layout = ({
   children,
   headerContainerClass,
   headerTop,
   headerPaddingClass,
-  headerPositionClass
+  headerPositionClass,
 }) => {
   return (
     <Fragment>
@@ -28,12 +28,12 @@ const LayoutOne = ({
   );
 };
 
-LayoutOne.propTypes = {
+Layout.propTypes = {
   children: PropTypes.any,
   headerContainerClass: PropTypes.string,
   headerPaddingClass: PropTypes.string,
   headerPositionClass: PropTypes.string,
-  headerTop: PropTypes.string
+  headerTop: PropTypes.string,
 };
 
-export default LayoutOne;
+export default Layout;
