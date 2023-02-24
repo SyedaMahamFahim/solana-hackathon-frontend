@@ -2,20 +2,13 @@ import React, { Fragment, useState, useEffect } from "react";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
-import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
 import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
-import ProductGrid from "../wrappers/product/ProductGrid";
-import { nftsData } from "../data";
 import Paginator from "react-hooks-paginator";
-import { connect } from "react-redux";
 import { getSortedProducts } from "../helpers/product";
-
-import ShopSidebar from "../wrappers/product/ShopSidebar";
-import ShopTopbar from "../wrappers/product/ShopTopbar";
-import ShopProducts from "../wrappers/product/ShopProducts";
 
 import products from "../data/products.json";
 
+import { Breadcrumb, ShopTopbar, ShopNft } from "../wrappers";
 const DiamondsStones = ({ location }) => {
   const [layout, setLayout] = useState("list");
   const [sortType, setSortType] = useState("");
@@ -91,7 +84,7 @@ const DiamondsStones = ({ location }) => {
                 />
 
                 {/* shop page content default */}
-                <ShopProducts layout={layout} products={currentData} />
+                <ShopNft layout={layout} products={currentData} />
 
                 {/* shop product pagination */}
                 <div className="pro-pagination-style text-center mt-30">
@@ -112,7 +105,7 @@ const DiamondsStones = ({ location }) => {
           </div>
         </div>
 
-        {/* <TabProduct spaceBottomClass="pb-60" category="fashion" /> */}
+        {/* <TabNft spaceBottomClass="pb-60" category="fashion" /> */}
       </Layout>
     </>
   );

@@ -6,12 +6,18 @@ Remove Extra pages
 add data to product.json file
 remove link from explore diamond (done)
 
-
 FILE I HAVE USED
 ShopListStandard
 
-
-HeroSliderTen
+HeroSlider
 SectionTitleWithText
-CategoryTwoSlider
-TabProduct
+DiamondSlider
+TabNft
+
+wrapper
+Breadcrumb
+ShopTopbar
+ShopNft
+TextGrid
+NftDescriptionTab
+NftImageDescription

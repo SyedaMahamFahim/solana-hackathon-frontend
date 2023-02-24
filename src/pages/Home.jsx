@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
 import MetaTags from "react-meta-tags";
 import Layout from "../layouts/Layout";
-import HeroSliderTen from "../wrappers/hero-slider/HeroSliderTen";
-import FeatureIcon from "../wrappers/feature-icon/FeatureIcon";
-import TabProduct from "../wrappers/product/TabProduct";
-import BlogFeatured from "../wrappers/blog-featured/BlogFeatured";
+
 import SectionTitleWithText from "../components/section-title/SectionTitleWithText";
-import CategoryTwoSlider from "../wrappers/category/CategoryTwoSlider";
+
+
+import { HeroSlider,TabNft ,DiamondSlider} from "../wrappers";
 
 const Home = () => {
   return (
@@ -23,16 +22,16 @@ const Home = () => {
         headerPaddingClass="header-padding-1"
       >
         {/* hero slider */}
-        <HeroSliderTen />
+        <HeroSlider />
 
         {/* section title */}
         <SectionTitleWithText spaceTopClass="pt-95" spaceBottomClass="pb-90" />
         {/* category */}
-        <CategoryTwoSlider spaceTopClass="pt-100" spaceBottomClass="pb-95" />
+        <DiamondSlider spaceTopClass="pt-100" spaceBottomClass="pb-95" />
         <br />
         <br />
         {/* tab product */}
-        <TabProduct spaceBottomClass="pb-60" category="fashion" />
+        <TabNft spaceBottomClass="pb-60" category="fashion" />
       </Layout>
     </Fragment>
   );

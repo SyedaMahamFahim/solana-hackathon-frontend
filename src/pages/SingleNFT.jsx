@@ -4,10 +4,10 @@ import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import { connect } from "react-redux";
 import Layout from "../layouts/Layout";
-import Breadcrumb from "../wrappers/breadcrumb/Breadcrumb";
-import RelatedProductSlider from "../wrappers/product/RelatedProductSlider";
-import ProductDescriptionTab from "../wrappers/product/ProductDescriptionTab";
-import ProductImageDescription from "../wrappers/product/ProductImageDescription";
+
+
+
+import { Breadcrumb,NftDescriptionTab,NftImageDescription} from "../wrappers";
 
 const SingleNFT = ({ location, product }) => {
   const { pathname } = location;
@@ -30,13 +30,13 @@ const SingleNFT = ({ location, product }) => {
         <Breadcrumb />
         hey wolrd
         {/* product description with image */}
-        <ProductImageDescription
+        <NftImageDescription
           spaceTopClass="pt-100"
           spaceBottomClass="pb-100"
           product={product}
         />
         {/* product description tab */}
-        <ProductDescriptionTab
+        <NftDescriptionTab
           spaceBottomClass="pb-90"
           productFullDesc={product.fullDescription}
         />
