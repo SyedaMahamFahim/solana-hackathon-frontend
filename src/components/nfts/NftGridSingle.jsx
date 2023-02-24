@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-const NftGridSingle = ({ product, sliderClassName, spaceBottomClass }) => {
+const NftGridSingle = ({ nft, sliderClassName, spaceBottomClass }) => {
   return (
     <Fragment>
       <div
@@ -13,24 +13,24 @@ const NftGridSingle = ({ product, sliderClassName, spaceBottomClass }) => {
           className={`product-wrap ${spaceBottomClass ? spaceBottomClass : ""}`}
         >
           <div className="product-img">
-            <Link to={"/product/" + product.id}>
-              <img className="default-img" src={product.image[0]} alt="" />
+            <Link to={"/product/" + nft.id}>
+              <img className="default-img" src={nft.image} alt="" />
             </Link>
 
             <div className="product-action">
               <div className="pro-same-action pro-cart">
-                <Link to={product.id}>Buy now</Link>
+                <Link to={nft.id}>Buy now</Link>
               </div>
             </div>
           </div>
           <div className="product-content text-center">
             <h3>
-              <Link to={"/product/" + product.id}>{product.name}</Link>
+              <Link to={"/product/" + nft.id}>{nft.title}</Link>
             </h3>
 
             <div className="product-price">
               <span>Price:</span>
-              <span>{product.price} USD </span>
+              <span>{nft.price} USD </span>
             </div>
           </div>
         </div>

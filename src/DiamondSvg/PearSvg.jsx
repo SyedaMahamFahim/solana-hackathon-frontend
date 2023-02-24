@@ -4,7 +4,7 @@ import "./diamonds_svg.css";
 const PearSvg = () => {
   return (
     <>
-      <a
+      <div
         className="css-qhtouv"
       >
         <svg
@@ -22,7 +22,7 @@ const PearSvg = () => {
           Pear
         </div>
     
-      </a>
+      </div>
     </>
   );
 };

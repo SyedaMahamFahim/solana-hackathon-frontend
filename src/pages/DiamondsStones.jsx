@@ -7,12 +7,11 @@ import Paginator from "react-hooks-paginator";
 import { getSortedProducts } from "../helpers/product";
 
 import products from "../data/products.json";
-
+import {nftsData} from "../data/index";
 import { Breadcrumb, MarketPlaceTopbar, ShopNft } from "../wrappers";
 import { SectionTitleWithText } from "../components/index";
 
 const DiamondsStones = ({ location }) => {
-  const [layout, setLayout] = useState("list");
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
   const [filterSortType, setFilterSortType] = useState("");
@@ -25,9 +24,7 @@ const DiamondsStones = ({ location }) => {
   const pageLimit = 15;
   const { pathname } = location;
 
-  const getLayout = (layout) => {
-    setLayout(layout);
-  };
+
 
   const getSortParams = (sortType, sortValue) => {
     setSortType(sortType);
@@ -40,7 +37,7 @@ const DiamondsStones = ({ location }) => {
   };
 
   useEffect(() => {
-    let sortedProducts = getSortedProducts(products, sortType, sortValue);
+    let sortedProducts = getSortedProducts(nftsData, sortType, sortValue);
     const filterSortedProducts = getSortedProducts(
       sortedProducts,
       filterSortType,
@@ -49,7 +46,7 @@ const DiamondsStones = ({ location }) => {
     sortedProducts = filterSortedProducts;
     setSortedProducts(sortedProducts);
     setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
-  }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
+  }, [offset, nftsData, sortType, sortValue, filterSortType, filterSortValue]);
 
   return (
     <>
@@ -79,14 +76,13 @@ const DiamondsStones = ({ location }) => {
               <div className="col-lg-12 order-1 order-lg-2">
                 {/* shop topbar default */}
                 <MarketPlaceTopbar
-                  getLayout={getLayout}
                   getFilterSortParams={getFilterSortParams}
-                  productCount={products.length}
+                  productCount={nftsData.length}
                   sortedProductCount={currentData.length}
                 />
 
                 {/* shop page content default */}
-                <ShopNft layout={layout} products={currentData} />
+                <ShopNft  nftsData={currentData} />
 
                 {/* shop product pagination */}
                 <div className="pro-pagination-style text-center mt-30">
@@ -107,7 +103,6 @@ const DiamondsStones = ({ location }) => {
           </div>
         </div>
 
-        {/* <TabNft spaceBottomClass="pb-60" category="fashion" /> */}
       </Layout>
     </>
   );

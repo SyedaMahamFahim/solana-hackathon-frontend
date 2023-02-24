@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import MobileMenuSearch from "./sub-components/MobileSearch";
-import MobileNavMenu from "./sub-components/MobileNavMenu";
-import MobileLangCurChange from "./sub-components/MobileLangCurrChange";
-import MobileWidgets from "./sub-components/MobileWidgets";
+import { MobileNavMenu, MobileWidgets } from "./sub-components";
+import ConnectBtn from "../ConnectBtn/ConnectBtn";
 
 const MobileMenu = () => {
   useEffect(() => {
@@ -21,7 +19,7 @@ const MobileMenu = () => {
     const numMenuExpand = menuExpand.length;
 
     for (let i = 0; i < numMenuExpand; i++) {
-      menuExpand[i].addEventListener("click", e => {
+      menuExpand[i].addEventListener("click", (e) => {
         sideMenuExpand(e);
       });
     }
@@ -33,7 +31,7 @@ const MobileMenu = () => {
     }
   });
 
-  const sideMenuExpand = e => {
+  const sideMenuExpand = (e) => {
     e.currentTarget.parentElement.classList.toggle("active");
   };
 
@@ -56,13 +54,10 @@ const MobileMenu = () => {
       <div className="offcanvas-wrapper">
         <div className="offcanvas-inner-content">
           {/* mobile search */}
-          <MobileMenuSearch />
-
+          <ConnectBtn />
+          <br />
           {/* mobile nav menu */}
           <MobileNavMenu />
-
-          {/* mobile language and currency */}
-          <MobileLangCurChange />
 
           {/* mobile widgets */}
           <MobileWidgets />

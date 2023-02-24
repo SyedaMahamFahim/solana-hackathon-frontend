@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
@@ -13,7 +12,7 @@ const NotFound = ({ location }) => {
   const { pathname } = location;
 
   return (
-    <Fragment>
+    <>
       <MetaTags>
         <title>Flone | Not Found</title>
         <meta
@@ -58,12 +57,10 @@ const NotFound = ({ location }) => {
           </div>
         </div>
       </Layout>
-    </Fragment>
+    </>
   );
 };
 
-NotFound.propTypes = {
-  location: PropTypes.object,
-};
+
 
 export default NotFound;

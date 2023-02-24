@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-
-import {
-  Logo,
-    NavMenu,
-    MobileMenu
-} from "../../components/index";
-import { ConnectBtn } from "../../components";
-
-
+import { Logo, NavMenu, MobileMenu } from "../../components/index";
+import { ConnectBtn,IconGroup } from "../../components";
 const Header = ({
   layout,
   headerPaddingClass,
@@ -58,13 +51,15 @@ const Header = ({
               className="col-xl-2 col-lg-2 col-md-6 col-8"
               style={{
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "flex-end",
                 alignItems: "center",
                 flexWrap: "wrap",
+                alignContent: "center",
               }}
             >
-              {/* Icon group */}
               <ConnectBtn />
+              {/* Icon group */}
+              <IconGroup />
             </div>
           </div>
         </div>

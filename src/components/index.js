@@ -17,12 +17,15 @@ import FooterNewsletter from "./footer/FooterNewsletter";
 import Logo from "./header/Logo";
 import NavMenu from "./header/NavMenu";
 import MobileMenu from "./header/MobileMenu";
+import IconGroup from "./header/IconGroup";
 
 // Slider
 import HeroSliderSingle from "./hero-slider/HeroSliderSingle";
 
 // TextGridSingle
 import TextGridSingle from "./text-grid/TextGridSingle";
+
+
 export{
     ConnectBtn,
     NftGridSingle,
@@ -41,12 +44,12 @@ export{
     Logo,
     NavMenu,
     MobileMenu,
+    IconGroup,
 
     // Slider
     HeroSliderSingle,
 
     // TextGridSingle
     TextGridSingle,
-
     
 }

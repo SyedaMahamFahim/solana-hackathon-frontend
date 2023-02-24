@@ -1,7 +1,5 @@
-import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
-import HeaderSocial from "./sub-components/HeaderSocial";
 import NavMenu from "./NavMenu";
 
 const OffcanvasMenu = ({ activeState, getActiveState }) => {
@@ -23,15 +21,10 @@ const OffcanvasMenu = ({ activeState, getActiveState }) => {
       {/* nav menu*/}
       <NavMenu sidebarMenu={true} />
 
-      {/* header social */}
-      <HeaderSocial />
+  
     </div>
   );
 };
 
-OffcanvasMenu.propTypes = {
-  activeState: PropTypes.bool,
-  getActiveState: PropTypes.func,
-};
 
 export default OffcanvasMenu;

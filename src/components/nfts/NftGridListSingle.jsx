@@ -1,26 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useToasts } from "react-toast-notifications";
-import { getDiscountPrice } from "../../helpers/product";
 
-const NftGridListSingle = ({
-  product,
-  currency,
-
-  sliderClassName,
-  spaceBottomClass,
-}) => {
-  const [modalShow, setModalShow] = useState(false);
-  const { addToast } = useToasts();
-
-  const discountedPrice = getDiscountPrice(product.price, product.discount);
-  const finalProductPrice = +(product.price * currency.currencyRate).toFixed(2);
-  const finalDiscountedPrice = +(
-    discountedPrice * currency.currencyRate
-  ).toFixed(2);
-
+const NftGridListSingle = ({ nft, sliderClassName, spaceBottomClass }) => {
   return (
-    <Fragment>
+    <>
       <div
         className={`col-xl-4 col-sm-6 ${
           sliderClassName ? sliderClassName : ""
@@ -30,17 +13,13 @@ const NftGridListSingle = ({
           className={`product-wrap ${spaceBottomClass ? spaceBottomClass : ""}`}
         >
           <div className="product-img">
-            <Link to={"/product/" + product.id}>
-              <img className="default-img" src={product.image[0]} alt="" />
+            <Link to={"/product/" + nft.id}>
+              <img className="default-img" src={nft.image} alt={nft.title} />
             </Link>
 
             <div className="product-action">
               <div className="pro-same-action pro-cart">
-                <a
-                  href={product.affiliateLink}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
+                <a href={"/"} rel="noopener noreferrer" target="_blank">
                   {" "}
                   Buy now{" "}
                 </a>
@@ -49,11 +28,13 @@ const NftGridListSingle = ({
           </div>
           <div className="product-content text-center">
             <h3>
-              <Link to={"/product/" + product.id}>{product.name}</Link>
+              <Link to={"/product/" + nft.id}>{nft.name}</Link>
             </h3>
 
             <div className="product-price">
-              <span>{currency.currencySymbol + finalProductPrice} </span>
+              <span>
+                {nft.price} ~ {nft.cryptoPrice}
+              </span>
             </div>
           </div>
         </div>
@@ -62,21 +43,12 @@ const NftGridListSingle = ({
             <div className="col-xl-4 col-md-5 col-sm-6">
               <div className="product-list-image-wrap">
                 <div className="product-img">
-                  <Link to={"/product/" + product.id}>
+                  <Link to={"/product/" + nft.id}>
                     <img
                       className="default-img img-fluid"
-                      src={product.image[0]}
+                      src={nft.image}
                       alt=""
                     />
-                    {product.image.length > 1 ? (
-                      <img
-                        className="hover-img img-fluid"
-                        src={product.image[1]}
-                        alt=""
-                      />
-                    ) : (
-                      ""
-                    )}
                   </Link>
                 </div>
               </div>
@@ -84,25 +56,19 @@ const NftGridListSingle = ({
             <div className="col-xl-8 col-md-7 col-sm-6">
               <div className="shop-list-content">
                 <h3>
-                  <Link to={"/product/" + product.id}>{product.name}</Link>
+                  <Link to={"/product/" + nft.id}>{nft.title}</Link>
                 </h3>
                 <div className="product-list-price">
-                  <span>{currency.currencySymbol + finalProductPrice} </span>
+                  <span>
+                    {nft.price} ~ {nft.cryptoPrice}
+                  </span>
                 </div>
 
-                {product.shortDescription ? (
-                  <p>{product.shortDescription}</p>
-                ) : (
-                  ""
-                )}
+                {nft.shortDescription ? <p>{nft.shortDescription}</p> : ""}
 
                 <div className="shop-list-actions d-flex align-items-center">
                   <div className="shop-list-btn btn-hover">
-                    <a
-                      href={product.affiliateLink}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
+                    <a href={"/"} rel="noopener noreferrer" target="_blank">
                       {" "}
                       Buy now{" "}
                     </a>
@@ -113,8 +79,7 @@ const NftGridListSingle = ({
           </div>
         </div>
       </div>
-      {/* product modal */}
-    </Fragment>
+    </>
   );
 };
 
