@@ -20,7 +20,7 @@ const DiamondsStones = ({ location }) => {
   const [currentData, setCurrentData] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
 
-  const pageLimit = 15;
+  const pageLimit = 6;
   const { pathname } = location;
 
   // eslint-disable-next-line
@@ -85,7 +85,7 @@ const DiamondsStones = ({ location }) => {
                 {/* shop page content default */}
                 <ShopNft nftsData={currentData} />
 
-                {/* shop product pagination */}
+                {/* nft  pagination */}
                 <div className="pro-pagination-style text-center mt-30">
                   <Paginator
                     totalRecords={sortedProducts.length}
