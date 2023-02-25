@@ -63,7 +63,7 @@ const DiamondsStones = ({ location }) => {
 
         {/* section title with text */}
         <SectionTitleWithText
-          spaceTopClass="pt-80"
+          spaceTopClass="pt-70"
           spaceBottomClass="pb-55"
           isH5Required={false}
           paraText="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."

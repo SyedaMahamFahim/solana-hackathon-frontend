@@ -22,7 +22,7 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
             <Link to={"/diamonds-stones"}>Diamonds Stone</Link>
           </li>
           <li>
-            <Link to={"/mint-your-product"}>Mint Your Product</Link>
+            <Link to={"/mint-your-nft"}>Mint Your NFT</Link>
           </li>
           <li>
             <Link to={"/about"}>About Us</Link>
@@ -32,7 +32,5 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
     </div>
   );
 };
-
-
 
 export default NavMenu;

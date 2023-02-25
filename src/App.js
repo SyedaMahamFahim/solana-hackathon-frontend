@@ -11,6 +11,7 @@ import {
   About,
   SingleNFT,
   NotFound,
+  MintNFT
 } from "./pages/index";
 
 
@@ -54,6 +55,9 @@ const App = () => {
                 />
                 {/* About */}
                 <Route path={"/about"} component={About} />
+                {/* MintNFT */}
+                <Route path={"/mint-your-nft"} component={MintNFT } />
+
                 <Route exact component={NotFound} />
               </Switch>
             </Suspense>

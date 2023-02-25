@@ -16,7 +16,7 @@ const MobileNavMenu = () => {
           <Link to={"/diamonds-stones"}>Diamonds Stone</Link>
         </li>
         <li>
-          <Link to={"/mint-your-product"}>Mint Your Product</Link>
+          <Link to={"/mint-your-nft"}>Mint Your Product</Link>
         </li>
         <li>
           <Link to={"/about"}>About Us</Link>
@@ -25,7 +25,5 @@ const MobileNavMenu = () => {
     </nav>
   );
 };
-
-
 
 export default MobileNavMenu;
