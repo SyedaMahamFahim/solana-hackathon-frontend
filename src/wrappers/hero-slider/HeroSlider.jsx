@@ -1,8 +1,8 @@
 import React from "react";
 import Swiper from "react-id-swiper";
-import sliderData from "../../data/hero-sliders/hero-slider-ten.json";
+import { heroSlider } from "../../data/index";
 
-import {HeroSliderSingle } from "../../components/index"
+import { HeroSliderSingle } from "../../components/index";
 const HeroSlider = () => {
   const params = {
     effect: "fade",
@@ -32,8 +32,8 @@ const HeroSlider = () => {
     <div className="slider-area">
       <div className="slider-active nav-style-1">
         <Swiper {...params}>
-          {sliderData &&
-            sliderData.map((single, key) => {
+          {heroSlider &&
+            heroSlider.map((single, key) => {
               return (
                 <HeroSliderSingle
                   data={single}

@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import textGridData from "../../data/text-grid/text-grid-one.json";
-
+import {textGrid} from "../../data/index";
 import {TextGridSingle} from "../../components/index";
 
 const TextGrid = ({ spaceBottomClass }) => {
@@ -13,8 +12,8 @@ const TextGrid = ({ spaceBottomClass }) => {
     >
       <div className="container">
         <div className="row">
-          {textGridData &&
-            textGridData.map((single, key) => {
+          {textGrid &&
+            textGrid.map((single, key) => {
               return (
                 <TextGridSingle
                   data={single}

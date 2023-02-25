@@ -1,4 +1,4 @@
-[
+const heroSlider=[
   {
     "id": 1,
     "title": "Certified Diamonds",
@@ -16,3 +16,4 @@
     "url": "/shop-grid-standard"
   }
 ]
+export default heroSlider

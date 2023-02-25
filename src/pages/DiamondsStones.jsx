@@ -6,8 +6,7 @@ import Layout from "../layouts/Layout";
 import Paginator from "react-hooks-paginator";
 import { getSortedProducts } from "../helpers/product";
 
-import products from "../data/products.json";
-import {nftsData} from "../data/index";
+import { nftsData } from "../data/index";
 import { Breadcrumb, MarketPlaceTopbar, ShopNft } from "../wrappers";
 import { SectionTitleWithText } from "../components/index";
 
@@ -23,8 +22,6 @@ const DiamondsStones = ({ location }) => {
 
   const pageLimit = 15;
   const { pathname } = location;
-
-
 
   const getSortParams = (sortType, sortValue) => {
     setSortType(sortType);
@@ -82,7 +79,7 @@ const DiamondsStones = ({ location }) => {
                 />
 
                 {/* shop page content default */}
-                <ShopNft  nftsData={currentData} />
+                <ShopNft nftsData={currentData} />
 
                 {/* shop product pagination */}
                 <div className="pro-pagination-style text-center mt-30">
@@ -102,7 +99,6 @@ const DiamondsStones = ({ location }) => {
             </div>
           </div>
         </div>
-
       </Layout>
     </>
   );
