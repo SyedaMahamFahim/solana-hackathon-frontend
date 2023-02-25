@@ -2,7 +2,7 @@ const nftsData = [
   {
     id: 1,
     title:"Diamond NFT",
-    price:"34$",
+    price:"98",
     cryptoPrice:"13Eth",
     shortDescription:"lorem amndmsn",
     cateory: "Jewellery",
@@ -32,7 +32,7 @@ const nftsData = [
   {
     id: 2,
     title:"Diamond NFT",
-    price:"34$",
+    price:"78",
     cryptoPrice:"13Eth",
     shortDescription:"lorem amndmsn",
     image:"/assets/images/nfts/jewellery-nft-2.webp",
@@ -62,7 +62,7 @@ const nftsData = [
   {
     id: 3,
     title:"Diamond NFT",
-    price:"34$",
+    price:"66",
     cryptoPrice:"13Eth",
     shortDescription:"lorem amndmsn",
     image:"/assets/images/nfts/jewellery-nft-3.webp",
@@ -92,7 +92,7 @@ const nftsData = [
   {
     id: 4,
     title:"Diamond NFT",
-    price:"34$",
+    price:"456",
     cryptoPrice:"13Eth",
     shortDescription:"lorem amndmsn",
     image:"/assets/images/nfts/jewellery-nft-4.webp",

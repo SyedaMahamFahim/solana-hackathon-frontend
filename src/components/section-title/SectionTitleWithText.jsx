@@ -1,6 +1,6 @@
 import React from "react";
 
-const  SectionTitleWithText = ({ spaceTopClass, spaceBottomClass,isH5Required }) => {
+const  SectionTitleWithText = ({ spaceTopClass, spaceBottomClass,isH5Required,h5Text,h1Text,paraText}) => {
 
   return (
     <div
@@ -13,13 +13,10 @@ const  SectionTitleWithText = ({ spaceTopClass, spaceBottomClass,isH5Required })
          
           <h5  style={{
             display: isH5Required ? 'block' : 'none'
-          }}>Who Are We</h5>
-          <h1>Welcome To Flone</h1>
+          }}>{h5Text}</h5>
+          <h1>{h1Text}</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt labor et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commo consequat irure{" "}
+            {paraText}
           </p>
         </div>
       </div>

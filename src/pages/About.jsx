@@ -3,15 +3,9 @@ import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
 
+import { SectionTitleWithText } from "../components/index";
 
-import {
-  SectionTitleWithText
-} from "../components/index";
-
-import {
-  Breadcrumb,
-  TextGrid
-} from "../wrappers";
+import { Breadcrumb, TextGrid } from "../wrappers";
 
 const About = ({ location }) => {
   const { pathname } = location;
@@ -19,11 +13,8 @@ const About = ({ location }) => {
   return (
     <>
       <MetaTags>
-        <title>Flone | About us</title>
-        <meta
-          name="description"
-          content="About page of flone react minimalist eCommerce template."
-        />
+        <title>About us</title>
+        <meta name="description" content="About page" />
       </MetaTags>
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={pathname}>About us</BreadcrumbsItem>
@@ -36,6 +27,9 @@ const About = ({ location }) => {
           spaceTopClass="pt-100"
           spaceBottomClass="pb-55"
           isH5Required={true}
+          paraText="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          h1Text="About Us"
+          h5Text="Who we are"
         />
 
         {/* text grid */}

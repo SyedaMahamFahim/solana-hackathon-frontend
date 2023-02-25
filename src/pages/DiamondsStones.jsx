@@ -23,6 +23,7 @@ const DiamondsStones = ({ location }) => {
   const pageLimit = 15;
   const { pathname } = location;
 
+  // eslint-disable-next-line
   const getSortParams = (sortType, sortValue) => {
     setSortType(sortType);
     setSortValue(sortValue);
@@ -43,15 +44,15 @@ const DiamondsStones = ({ location }) => {
     sortedProducts = filterSortedProducts;
     setSortedProducts(sortedProducts);
     setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
-  }, [offset, nftsData, sortType, sortValue, filterSortType, filterSortValue]);
+  }, [offset, sortType, sortValue, filterSortType, filterSortValue]);
 
   return (
     <>
       <MetaTags>
-        <title>Flone | About us</title>
+        <title>Diamond Stones</title>
         <meta
           name="description"
-          content="About page of flone react minimalist eCommerce template."
+          content="Diamond Stones"
         />
       </MetaTags>
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
@@ -65,6 +66,9 @@ const DiamondsStones = ({ location }) => {
           spaceTopClass="pt-80"
           spaceBottomClass="pb-55"
           isH5Required={false}
+          paraText="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          h1Text="Diamond Stones"
+          
         />
 
         <div className="shop-area pt-95 pb-100">

@@ -4,9 +4,7 @@ import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
 
-
-
-import { Breadcrumb} from "../wrappers";
+import { Breadcrumb } from "../wrappers";
 
 const NotFound = ({ location }) => {
   const { pathname } = location;
@@ -14,11 +12,8 @@ const NotFound = ({ location }) => {
   return (
     <>
       <MetaTags>
-        <title>Flone | Not Found</title>
-        <meta
-          name="description"
-          content="404 page of flone react minimalist eCommerce template."
-        />
+        <title>Not Found</title>
+        <meta name="description" content="404 page" />
       </MetaTags>
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={pathname}>404 page</BreadcrumbsItem>
@@ -36,18 +31,7 @@ const NotFound = ({ location }) => {
                     Sorry but the page you are looking for does not exist, have
                     been removed, name changed or is temporarity unavailable.
                   </p>
-                  <form className="searchform mb-50">
-                    <input
-                      type="text"
-                      name="search"
-                      id="error_search"
-                      placeholder="Search..."
-                      className="searchform__input"
-                    />
-                    <button type="submit" className="searchform__submit">
-                      <i className="fa fa-search" />
-                    </button>
-                  </form>
+
                   <Link to={"/"} className="error-btn">
                     Back to home page
                   </Link>
@@ -60,7 +44,5 @@ const NotFound = ({ location }) => {
     </>
   );
 };
-
-
 
 export default NotFound;

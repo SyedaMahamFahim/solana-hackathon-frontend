@@ -5,12 +5,15 @@ const Logo = ({ imageUrl, logoClass }) => {
   return (
     <div className={`${logoClass ? logoClass : ""}`}>
       <Link to={"/"}>
-        <img alt="" src={imageUrl} />
+        <h4
+        style={{
+          fontSize: '25px',
+          fontWeight: 'bold',
+        }}
+        >DiamXchange</h4>
       </Link>
     </div>
   );
 };
-
-
 
 export default Logo;

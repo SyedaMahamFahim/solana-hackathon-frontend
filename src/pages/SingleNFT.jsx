@@ -15,15 +15,15 @@ const SingleNFT = ({ location }) => {
   return (
     <>
       <MetaTags>
-        <title>Flone | Product Page</title>
+        <title>NFT</title>
         <meta
           name="description"
-          content="Product page of flone react minimalist eCommerce template."
+          content="NFT"
         />
       </MetaTags>
 
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
-      <BreadcrumbsItem to={pathname}>Shop Product</BreadcrumbsItem>
+      <BreadcrumbsItem to={pathname}>NFT</BreadcrumbsItem>
 
       <Layout headerTop="visible">
         {/* breadcrumb */}
