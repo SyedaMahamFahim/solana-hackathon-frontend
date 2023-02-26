@@ -10,7 +10,7 @@ import ShopNft from "./nfts/ShopNft";
 import MarketPlaceTopbar from "./nfts/MarketPlaceTopbar";
 import MarketPlaceTopbarFilter from "./nfts/MarketPlaceTopbarFilter";
 import TabNft from "./nfts/TabNft";
-
+import MineNftInputs from "./nfts/MineNftInputs";
 export {
   Breadcrumb,
   DiamondSlider,
@@ -24,4 +24,5 @@ export {
   MarketPlaceTopbar,
   MarketPlaceTopbarFilter,
   TabNft,
+  MineNftInputs 
 };

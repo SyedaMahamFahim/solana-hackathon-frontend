@@ -25,7 +25,11 @@ import TextGridSingle from "./text-grid/TextGridSingle";
 // Wallet
 import WalletBtn from "./WalletBtn/WalletBtn";
 
+// Error Message
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
+
+// FormInput
+import FormInput from "./form-input/FormInput";
 export{
     ConnectBtn,
     NftGridSingle,
@@ -50,5 +54,9 @@ export{
     TextGridSingle,
     
     // Error Message
-    ErrorMessage
+    ErrorMessage,
+
+    // FormInput
+    FormInput
+
 }

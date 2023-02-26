@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "^2.9.11",
     "@solana/wallet-adapter-react": "^0.15.30",
     "@solana/wallet-adapter-react-ui": "^0.9.29",
     "@solana/wallet-adapter-wallets": "^0.19.15",
@@ -20,6 +21,7 @@
     "react-countup": "^4.2.3",
     "react-dom": "^17.0.2",
     "react-fullpage": "^0.1.19",
+    "react-hook-form": "^7.43.2",
     "react-hooks-paginator": "^0.4.0",
     "react-id-swiper": "2.4.0",
     "react-lightgallery": "0.6.3",
@@ -38,7 +40,8 @@
     "redux-multilanguage": "^0.1.2",
     "redux-thunk": "^2.3.0",
     "swiper": "^5.2.0",
-    "uuid": "^3.3.3"
+    "uuid": "^3.3.3",
+    "yup": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
