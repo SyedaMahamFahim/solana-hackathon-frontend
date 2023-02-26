@@ -15,9 +15,10 @@ const WalletContextProvider = ({ children }) => {
   const endpoint = web3.clusterApiUrl("devnet");
 
   const wallets = [new walletAdapterWallets.PhantomWalletAdapter()];
+
   return (
     <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets}>
+      <WalletProvider wallets={wallets} autoConnect={true}>
         <WalletModalProvider>{children}</WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>

@@ -32,13 +32,22 @@ const Footer = ({
 
   return (
     <footer
-      className={`footer-area ${
+      className={`footer-area mt-auto ${
         backgroundColorClass ? backgroundColorClass : ""
       } ${spaceTopClass ? spaceTopClass : ""} ${
         spaceBottomClass ? spaceBottomClass : ""
       } ${extraFooterClass ? extraFooterClass : ""} ${
         spaceLeftClass ? spaceLeftClass : ""
       } ${spaceRightClass ? spaceRightClass : ""}`}
+
+      style={{
+        marginTop: 'auto',
+        position: 'fixed',
+        left: '0',
+        bottom: '0',
+        width: '100%',
+        textAlign: 'center'
+      }}
     >
       <div className={`${containerClass ? containerClass : "container"}`}>
         <div className="row"

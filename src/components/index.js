@@ -9,9 +9,6 @@ import MarketPlaceTopActionFilter  from "./nfts/MarketPlaceTopActionFilter";
 import SectionTitleWithText from "./section-title/SectionTitleWithText";
 import SectionTitleWithoutText from "./section-title/SectionTitleWithoutText";
 
-// Footer
-import FooterCopyright from "./footer/FooterCopyright";
-import FooterNewsletter from "./footer/FooterNewsletter";
 
 // Header
 import Logo from "./header/Logo";
@@ -28,7 +25,7 @@ import TextGridSingle from "./text-grid/TextGridSingle";
 // Wallet
 import WalletBtn from "./WalletBtn/WalletBtn";
 
-
+import ErrorMessage from "./ErrorMessage/ErrorMessage";
 export{
     ConnectBtn,
     NftGridSingle,
@@ -38,10 +35,6 @@ export{
     MarketPlaceTopActionFilter,
     SectionTitleWithText,
     SectionTitleWithoutText,
-
-    // Footer
-    FooterCopyright,
-    FooterNewsletter,
 
     // Header
     Logo,
@@ -56,4 +49,6 @@ export{
     // TextGridSingle
     TextGridSingle,
     
+    // Error Message
+    ErrorMessage
 }

@@ -4,9 +4,12 @@ import App from "./App";
 import "./assets/scss/style.scss";
 import * as serviceWorker from "./serviceWorker";
 import WalletContextProvider from "./context/WalletContextProvider";
+import { TransactionsProvider } from "./context/TransactionsProvider";
 ReactDOM.render(
   <WalletContextProvider>
+    <TransactionsProvider>
     <App />
+    </TransactionsProvider>
   </WalletContextProvider>,
   document.getElementById("root")
 );

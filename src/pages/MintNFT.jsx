@@ -3,7 +3,7 @@ import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
 
-import { SectionTitleWithText } from "../components/index";
+import { SectionTitleWithText ,ErrorMessage} from "../components/index";
 
 import { Breadcrumb} from "../wrappers";
 
@@ -31,6 +31,7 @@ const MintNFT = ({ location }) => {
           h1Text="Mint Your NFT"
         />
 
+<ErrorMessage/>
         
       </Layout>
     </>
