@@ -27,7 +27,9 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
           <li>
             <Link to={"/about"}>About Us</Link>
           </li>
+          
         </ul>
+       
       </nav>
     </div>
   );

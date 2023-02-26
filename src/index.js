@@ -3,8 +3,13 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./assets/scss/style.scss";
 import * as serviceWorker from "./serviceWorker";
-
-ReactDOM.render(<App />, document.getElementById("root"));
+import WalletContextProvider from "./context/WalletContextProvider";
+ReactDOM.render(
+  <WalletContextProvider>
+    <App />
+  </WalletContextProvider>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

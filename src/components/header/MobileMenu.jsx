@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { MobileNavMenu, MobileWidgets } from "./sub-components";
-import ConnectBtn from "../ConnectBtn/ConnectBtn";
-
+import WalletBtn from "../WalletBtn/WalletBtn";
 const MobileMenu = () => {
   useEffect(() => {
     const offCanvasNav = document.querySelector("#offcanvas-navigation");
@@ -54,7 +53,7 @@ const MobileMenu = () => {
       <div className="offcanvas-wrapper">
         <div className="offcanvas-inner-content">
           {/* mobile search */}
-          <ConnectBtn />
+          <WalletBtn />
           <br />
           {/* mobile nav menu */}
           <MobileNavMenu />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Logo, NavMenu, MobileMenu } from "../../components/index";
-import { ConnectBtn,IconGroup } from "../../components";
+import {  IconGroup, WalletBtn } from "../../components";
 const Header = ({
   layout,
   headerPaddingClass,
@@ -47,6 +47,7 @@ const Header = ({
               {/* Nav menu */}
               <NavMenu />
             </div>
+            
             <div
               className="col-xl-2 col-lg-2 col-md-6 col-8"
               style={{
@@ -57,7 +58,9 @@ const Header = ({
                 alignContent: "center",
               }}
             >
-              <ConnectBtn />
+              <div className="d-none d-lg-flex">
+              <WalletBtn />
+            </div>
               {/* Icon group */}
               <IconGroup />
             </div>

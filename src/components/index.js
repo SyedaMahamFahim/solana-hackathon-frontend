@@ -25,6 +25,9 @@ import HeroSliderSingle from "./hero-slider/HeroSliderSingle";
 // TextGridSingle
 import TextGridSingle from "./text-grid/TextGridSingle";
 
+// Wallet
+import WalletBtn from "./WalletBtn/WalletBtn";
+
 
 export{
     ConnectBtn,
@@ -45,7 +48,8 @@ export{
     NavMenu,
     MobileMenu,
     IconGroup,
-
+    WalletBtn,
+    
     // Slider
     HeroSliderSingle,
 
