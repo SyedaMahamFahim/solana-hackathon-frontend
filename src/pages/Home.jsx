@@ -24,7 +24,14 @@ const Home = () => {
         <HeroSlider />
 
         {/* section title */}
-        <SectionTitleWithText spaceTopClass="pt-95" spaceBottomClass="pb-90" />
+        <SectionTitleWithText
+          spaceTopClass="pt-70"
+          spaceBottomClass="pb-55"
+          isH5Required={true}
+          paraText="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          h1Text="About Us"
+          h5Text="Who we are"
+        />
         {/* category */}
         <DiamondSlider spaceTopClass="pt-100" spaceBottomClass="pb-95" />
         <br />
