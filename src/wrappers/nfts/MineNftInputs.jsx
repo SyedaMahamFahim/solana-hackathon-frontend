@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { nftMetaData } from "../../data/index";
 import { FormInput } from "../../components";
-import { nftMetaDataSchema } from "../../utils/index";
+import nftMetaDataSchema  from "../../helpers/nftMetaDataSchema";
 
 const MineNftInputs = () => {
   const initialState = {};
