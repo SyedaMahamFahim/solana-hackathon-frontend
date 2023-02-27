@@ -8,4 +8,4 @@ const ScrollToTop = props => {
   return props.children;
 };
 
-export default withRouter(ScrollToTop);
+export default ScrollToTop;

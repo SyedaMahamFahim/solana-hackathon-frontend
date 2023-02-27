@@ -8,28 +8,28 @@
     "@solana/wallet-adapter-react-ui": "^0.9.29",
     "@solana/wallet-adapter-wallets": "^0.19.15",
     "@solana/web3.js": "^1.73.3",
-    "animate.css": "^3.7.2",
-    "bootstrap": "4.6.0",
-    "react": "^17.0.2",
-    "react-bootstrap": "1.6.1",
+    "animate.css": "^4.1.1",
+    "bootstrap": "5.2.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "2.7.2",
     "react-breadcrumbs-dynamic": "^1.2.1",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.2",
-    "react-hooks-paginator": "^0.4.0",
-    "react-id-swiper": "2.4.0",
-    "react-meta-tags": "^0.7.4",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "react-scroll": "^1.7.14",
-    "react-toast-notifications": "^2.2.5",
-    "swiper": "^5.2.0",
+    "react-hooks-paginator": "^0.5.0",
+    "react-id-swiper": "4.0.0",
+    "react-meta-tags": "^1.0.1",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-toast-notifications": "^2.5.1",
+    "swiper": "^9.0.5",
     "yup": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,7 +49,16 @@
     ]
   },
   "devDependencies": {
-    "redux-devtools-extension": "^2.13.8",
-    "sass": "^1.29.0"
+    "sass": "^1.58.3",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "react-app-rewired": "^2.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0"
   }
 }

@@ -7,4 +7,6 @@ const About = lazy(() => import("./About"));
 const SingleNFT = lazy(() => import("./SingleNFT"));
 const NotFound = lazy(() => import("./NotFound"));
 const MintNFT = lazy(() => import("./MintNFT"));
+
+
 export { DiamondsStones, IndividualJewellery,Home,About,SingleNFT ,NotFound,MintNFT};
