@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import WalletBtn from "../WalletBtn/WalletBtn";
 
+import { TransactionContext } from "../../context/TransactionsProvider";
 const NftGridListSingle = ({ nft, sliderClassName, spaceBottomClass }) => {
+  const { isPhantomInstall, isPhantomConnected } =
+    React.useContext(TransactionContext);
   return (
     <>
       <div
@@ -19,10 +23,20 @@ const NftGridListSingle = ({ nft, sliderClassName, spaceBottomClass }) => {
 
             <div className="product-action">
               <div className="pro-same-action pro-cart">
-                <a href={"/"} rel="noopener noreferrer" target="_blank">
-                  {" "}
-                  Buy now{" "}
-                </a>
+                {!isPhantomConnected ? (
+                  <WalletBtn />
+                ) : !isPhantomInstall ? (
+                  <a
+                    href="https://phantom.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="alert-link"
+                  >
+                    Download Phantom Wallet
+                  </a>
+                ) : (
+                  <Link to={"/"}> Buy now </Link>
+                )}
               </div>
             </div>
           </div>

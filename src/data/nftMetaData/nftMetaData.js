@@ -242,6 +242,16 @@ const nftMetaData = [
     placeholder:"Location",
     label:"Location",
   },
+  {
+    id: 26,
+    colNo:12,
+    tag:"input",
+    type:"file",
+    name:"image",
+    placeholder:"Image",
+    label:"Image",
+  },
+
 ];
 
 export default nftMetaData;

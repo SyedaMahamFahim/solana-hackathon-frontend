@@ -4,10 +4,8 @@ import WalletBtn from "../WalletBtn/WalletBtn";
 import { TransactionContext } from "../../context/TransactionsProvider";
 
 const ErrorMessage = () => {
- 
-  const { isPhantomInstall, isPhantomConnected } = React.useContext(
-    TransactionContext);
-
+  const { isPhantomInstall, isPhantomConnected } =
+    React.useContext(TransactionContext);
   return (
     <>
       {/* centra the div */}
@@ -43,9 +41,7 @@ const ErrorMessage = () => {
 
               <WalletBtn />
             </div>
-          ) : (
-            "Connected"
-          )}
+          ) : null}
         </div>
       </div>
     </>

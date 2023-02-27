@@ -2,14 +2,15 @@ import React from "react";
 import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
-
 import { SectionTitleWithText, ErrorMessage } from "../components/index";
-
 import { Breadcrumb, MineNftInputs } from "../wrappers";
+
+import { TransactionContext } from "../context/TransactionsProvider";
 
 const MintNFT = ({ location }) => {
   const { pathname } = location;
-
+  const { isPhantomInstall, isPhantomConnected } =
+    React.useContext(TransactionContext);
   return (
     <>
       <MetaTags>
@@ -31,8 +32,15 @@ const MintNFT = ({ location }) => {
           h1Text="Mint Your NFT"
         />
 
+        {/* {!isPhantomInstall ||
+          (!isPhantomConnected && (
+            
+          ))} */}
+
         <ErrorMessage />
-        <MineNftInputs />
+
+        {isPhantomInstall && isPhantomConnected && <MineNftInputs />}
+
         <br />
         <br />
         <br />

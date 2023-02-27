@@ -74,6 +74,7 @@ const MineNftInputs = () => {
                   </button>
                 </div>
               </div>
+             
             </form>
 
             <p className="form-message" />
