@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "./assets/scss/style.scss";
+
+
+import WalletContextProvider from "./context/WalletContextProvider";
+import { TransactionsProvider } from "./context/TransactionsProvider";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <WalletContextProvider>
+    <TransactionsProvider>
     <App />
+    </TransactionsProvider>
+  </WalletContextProvider>,
   </React.StrictMode>
 );
 

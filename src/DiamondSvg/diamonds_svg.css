@@ -1,0 +1,38 @@
+.css-rex2z0 {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 2.5rem;
+    height: auto;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+.css-1xu05hx {
+    margin-top: 8px;
+}
+.css-qhtouv {
+    box-sizing: border-box;
+    min-width: 0;
+    position: relative;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    outline: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.css-6i4fi3 > * {
+    padding-right: 0px;
+    width: 28.5714%;
+    display: inline-block;
+    height: 100%;
+    white-space: normal;
+}
