@@ -1,21 +1,13 @@
-import React, { Fragment } from "react";
-import MetaTags from "react-meta-tags";
+import React from "react";
 import Layout from "../layouts/Layout";
 
 import { SectionTitleWithText } from "../components/index";
 
-import { HeroSlider, TabNft, DiamondSlider } from "../wrappers";
+import { HeroSlider, AllNFTsWrapper, DiamondSlider } from "../wrappers";
 
 const Home = () => {
   return (
-    <Fragment>
-      <MetaTags>
-        <title>Home</title>
-        <meta
-          name="description"
-          content="Home"
-        />
-      </MetaTags>
+    <>
       <Layout
         headerContainerClass="container-fluid"
         headerPaddingClass="header-padding-1"
@@ -37,9 +29,11 @@ const Home = () => {
         <br />
         <br />
         {/* tab product */}
-        <TabNft spaceBottomClass="pb-60" category="fashion" />
+        <div className="pt-50 pb-100">
+          <AllNFTsWrapper />
+        </div>
       </Layout>
-    </Fragment>
+    </>
   );
 };
 

@@ -29,6 +29,9 @@ import ErrorMessage from "./ErrorMessage/ErrorMessage";
 
 // FormInput
 import FormInput from "./form-input/FormInput";
+
+// Loader
+import Loader from "./Loader/Loader";
 export{
     ConnectBtn,
     NftGridSingle,
@@ -55,6 +58,8 @@ export{
     ErrorMessage,
 
     // FormInput
-    FormInput
+    FormInput,
 
+    // Loader
+    Loader
 }

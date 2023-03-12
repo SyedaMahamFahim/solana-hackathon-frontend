@@ -8,14 +8,14 @@ const NftGridList = ({
 }) => {
   return (
     <>
-      {nftsData.map((nft) => {
+      {nftsData.map((nft,index) => {
         return (
          
           <NftGridSingle
             sliderClassName={sliderClassName}
             spaceBottomClass={spaceBottomClass}
             nft={nft}
-          
+            id={index}
             key={nft.id}
           />
         );

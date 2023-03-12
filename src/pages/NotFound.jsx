@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
 
@@ -11,10 +10,7 @@ const NotFound = ({ location }) => {
 
   return (
     <>
-      <MetaTags>
-        <title>Not Found</title>
-        <meta name="description" content="404 page" />
-      </MetaTags>
+   
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={pathname}>404 page</BreadcrumbsItem>
       <Layout headerTop="visible">

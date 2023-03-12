@@ -1,5 +1,4 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
 
@@ -14,13 +13,7 @@ const SingleNFT = ({ location }) => {
 
   return (
     <>
-      <MetaTags>
-        <title>NFT</title>
-        <meta
-          name="description"
-          content="NFT"
-        />
-      </MetaTags>
+     
 
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={pathname}>NFT</BreadcrumbsItem>

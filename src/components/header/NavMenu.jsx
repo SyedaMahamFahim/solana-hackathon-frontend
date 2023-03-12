@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import HeaderNavLinks from "./sub-components/HeaderNavLinks";
 
 const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
   return (
@@ -11,24 +11,7 @@ const NavMenu = ({ menuWhiteClass, sidebarMenu }) => {
       } `}
     >
       <nav>
-        <ul>
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"/individual-jewellery"}>Individual Jewellery</Link>
-          </li>
-          <li>
-            <Link to={"/diamonds-stones"}>Diamonds Stone</Link>
-          </li>
-          <li>
-            <Link to={"/mint-your-nft"}>Mint Your NFT</Link>
-          </li>
-          <li>
-            <Link to={"/about"}>About Us</Link>
-          </li>
-          
-        </ul>
+       <HeaderNavLinks/>
        
       </nav>
     </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
 import { SectionTitleWithText, ErrorMessage } from "../components/index";
@@ -13,10 +12,7 @@ const MintNFT = () => {
     React.useContext(TransactionContext);
   return (
     <>
-      <MetaTags>
-        <title>Mint Your NFT</title>
-        <meta name="description" content="Mint Your NFT" />
-      </MetaTags>
+      
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={pathname}>Mint Your NFT</BreadcrumbsItem>
       <Layout headerTop="visible">

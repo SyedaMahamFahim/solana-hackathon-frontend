@@ -1,5 +1,4 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
 
@@ -12,10 +11,7 @@ const About = () => {
 
   return (
     <>
-      <MetaTags>
-        <title>About us</title>
-        <meta name="description" content="About page" />
-      </MetaTags>
+     
       <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
       <BreadcrumbsItem to={pathname}>About us</BreadcrumbsItem>
       <Layout headerTop="visible">

@@ -4,7 +4,7 @@ import { TransactionContext } from "../../context/TransactionsProvider";
 import WalletBtn from "../WalletBtn/WalletBtn";
 import axios from "axios";
 
-const NftGridSingle = ({ nft, sliderClassName, spaceBottomClass }) => {
+const NftGridSingle = ({ nft,id, sliderClassName, spaceBottomClass }) => {
   const { isPhantomInstall, isPhantomConnected } =
   React.useContext(TransactionContext);
 
@@ -13,7 +13,6 @@ const NftGridSingle = ({ nft, sliderClassName, spaceBottomClass }) => {
   const getImageUri = async () => {
     try{
       const response = await axios.get(nft.uri)
-      console.log(response.data.image)
       setImageUri(response.data.image)
     } catch (error) {
       console.log(error)
@@ -36,7 +35,7 @@ const NftGridSingle = ({ nft, sliderClassName, spaceBottomClass }) => {
           className={`product-wrap ${spaceBottomClass ? spaceBottomClass : ""}`}
         >
           <div className="product-img">
-            <Link to={"/nft/" + nft.id}>
+            <Link to={"/nft/" + id}>
               <img className="default-img" 
                
               src={imageUri}
@@ -67,7 +66,7 @@ const NftGridSingle = ({ nft, sliderClassName, spaceBottomClass }) => {
           </div>
           <div className="product-content text-center">
             <h3>
-              <Link to={"/nft/" + nft.id}>{nft.title}</Link>
+              <Link to={"/nft/" + id}>{nft.title}</Link>
             </h3>
 
             <div className="product-price">
