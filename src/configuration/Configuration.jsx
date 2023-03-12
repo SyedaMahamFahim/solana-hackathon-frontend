@@ -15,7 +15,7 @@ const Configuration = () => {
         })}
 
         {/* Single NFT  */}
-        <Route path={"/nft/:id"} render={<SingleNFT />} />
+        <Route path={"/nft/:id"} element={<SingleNFT />} />
 
         <Route exact element={<NotFound />} />
       </Routes>

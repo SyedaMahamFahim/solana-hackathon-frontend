@@ -8,9 +8,8 @@ import {
   NftImageDescription,
 } from "../wrappers";
 
-const SingleNFT = ({ location }) => {
-  const { pathname } = location;
-
+const SingleNFT = () => {
+const pathname ="maham"
   return (
     <>
      
