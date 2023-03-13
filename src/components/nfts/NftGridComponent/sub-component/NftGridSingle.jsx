@@ -69,13 +69,13 @@ const NftGridSingle = ({ nft, id, sliderClassName, spaceBottomClass }) => {
           </div>
           <div className="product-content text-center">
             <h3>
-              <Link to={"/nft/" + id}>{nft.title}</Link>
+              <Link to={"/nft/" + id}>{nft.name}</Link>
             </h3>
 
-            <div className="product-price">
+            {/* <div className="product-price">
               <span>Price:</span>
               <span>{nft.price} USD </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

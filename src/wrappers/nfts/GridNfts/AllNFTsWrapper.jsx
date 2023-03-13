@@ -3,7 +3,7 @@ import Paginator from "react-hooks-paginator";
 import { getSortedProducts } from "../../../helpers/product";
 import useGetAllNFTsData from "../../../hooks/useGetAllNFTsData";
 
-import { Loader, ShopNft } from "../../../components/index";
+import { Loader, SectionTitleWithoutText, ShopNft } from "../../../components/index";
 
 const AllNFTsWrapper = () => {
   const { isLoading, allNfts } = useGetAllNFTsData();
@@ -60,6 +60,10 @@ const AllNFTsWrapper = () => {
                 <div className="col-lg-12 order-1 order-lg-2">
                   {/* shop page content default */}
 
+                  <SectionTitleWithoutText
+          titleText="Explore NFTS"
+          spaceBottomClass="mb-40"
+        />
                   <ShopNft nftsData={currentData} />
                   
                   

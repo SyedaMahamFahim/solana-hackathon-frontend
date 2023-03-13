@@ -7,7 +7,7 @@ const ShopNft = ({ nftsData }) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="shop-bottom-area mt-15">
+    <div className="shop-bottom-area mt-5">
       <div className={`row grid`}>
         {nftsData.map((nft, index) => {
           return (
