@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NftDescriptionInfo, NftImageGallery } from "../../components/index";
+import { NftDescriptionInfo, NftImageGallery } from "../../../components/index";
 const NftImageDescription = ({ spaceTopClass, spaceBottomClass, nftData }) => {
   return (
     <div

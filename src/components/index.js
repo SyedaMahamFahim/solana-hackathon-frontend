@@ -1,8 +1,7 @@
 import ConnectBtn from "./ConnectBtn/ConnectBtn";
 import NftGridSingle from "./nfts/NftGridComponent/sub-component/NftGridSingle";
-import NftImageGallery from "./nfts/NftImageGallery";
-import NftDescriptionInfo from "./nfts/NftDescriptionInfo";
-import MarketPlaceTopActionFilter from "./nfts/MarketPlaceTopActionFilter";
+import NftImageGallery from "./nfts/NftSingleComponents/NftImageGallery";
+import NftDescriptionInfo from "./nfts/NftSingleComponents/NftDescriptionInfo";
 
 // Section Title
 import SectionTitleWithText from "./section-title/SectionTitleWithText";
@@ -43,7 +42,6 @@ export {
   NftGridSingle,
   NftImageGallery,
   NftDescriptionInfo,
-  MarketPlaceTopActionFilter,
   SectionTitleWithText,
   SectionTitleWithoutText,
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Paginator from "react-hooks-paginator";
-import { getSortedProducts } from "../../helpers/product";
-import useGetAllNFTsData from "../../hooks/useGetAllNFTsData";
+import { getSortedProducts } from "../../../helpers/product";
+import useGetAllNFTsData from "../../../hooks/useGetAllNFTsData";
 
-import { Loader, ShopNft } from "../../components/index";
+import { Loader, ShopNft } from "../../../components/index";
 
 const AllNFTsWrapper = () => {
   const { isLoading, allNfts } = useGetAllNFTsData();

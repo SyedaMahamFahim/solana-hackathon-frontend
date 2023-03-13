@@ -4,13 +4,11 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import HeroSlider from "./hero-slider/HeroSlider";
 import TextGrid from "./text-grid/TextGrid";
-import NftDescriptionTab from "./nfts/NftDescriptionTab";
-import NftImageDescription from "./nfts/NftImageDescription";
-import MarketPlaceTopbar from "./nfts/MarketPlaceTopbar";
-import MarketPlaceTopbarFilter from "./nfts/MarketPlaceTopbarFilter";
-import TabNft from "./nfts/TabNft";
+import NftDescriptionTab from "./nfts/SingleNft/NftDescriptionTab";
+import NftImageDescription from "./nfts/SingleNft/NftImageDescription";
+
 import MineNftInputs from "./nfts/MineNftInputs";
-import AllNFTsWrapper from "./nfts/AllNFTsWrapper";
+import AllNFTsWrapper from "./nfts/GridNfts/AllNFTsWrapper";
 export {
   Breadcrumb,
   DiamondSlider,
@@ -20,9 +18,6 @@ export {
   TextGrid,
   NftDescriptionTab,
   NftImageDescription,
-  MarketPlaceTopbar,
-  MarketPlaceTopbarFilter,
-  TabNft,
   MineNftInputs,
   AllNFTsWrapper,
 };
