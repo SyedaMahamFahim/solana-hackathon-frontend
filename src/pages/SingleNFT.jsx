@@ -15,9 +15,7 @@ const SingleNFT = () => {
   const { id } = useParams();
 
   console.log("this is id", id);
-  const { isLoading, nftData } = useGetSingleNftData(
-    "GpnMpusHmCiXkJhkTjgAo7PM7XBwyRv9PzVjNpB2GmwL"
-  );
+  const { isLoading, nftData } = useGetSingleNftData(id);
 
   if (isLoading) {
     console.log("this is loading");

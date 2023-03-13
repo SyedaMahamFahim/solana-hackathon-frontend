@@ -8,7 +8,8 @@ const NftGridSingle = ({ nft, id, sliderClassName, spaceBottomClass }) => {
   const { isPhantomInstall, isPhantomConnected } =
     React.useContext(TransactionContext);
 
-  const nftAddress=nft.address.toBase58(); 
+
+  const nftAddress=nft.mintAddress.toBase58(); 
   const [imageUri, setImageUri] = useState("");
 
   const getImageUri = async () => {
