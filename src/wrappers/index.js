@@ -6,7 +6,6 @@ import HeroSlider from "./hero-slider/HeroSlider";
 import TextGrid from "./text-grid/TextGrid";
 import NftDescriptionTab from "./nfts/NftDescriptionTab";
 import NftImageDescription from "./nfts/NftImageDescription";
-import ShopNft from "./nfts/ShopNft";
 import MarketPlaceTopbar from "./nfts/MarketPlaceTopbar";
 import MarketPlaceTopbarFilter from "./nfts/MarketPlaceTopbarFilter";
 import TabNft from "./nfts/TabNft";
@@ -21,10 +20,9 @@ export {
   TextGrid,
   NftDescriptionTab,
   NftImageDescription,
-  ShopNft,
   MarketPlaceTopbar,
   MarketPlaceTopbarFilter,
   TabNft,
-  MineNftInputs ,
-  AllNFTsWrapper 
+  MineNftInputs,
+  AllNFTsWrapper,
 };

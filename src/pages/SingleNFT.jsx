@@ -1,29 +1,52 @@
 import React from "react";
 import { BreadcrumbsItem } from "react-breadcrumbs-dynamic";
 import Layout from "../layouts/Layout";
-
+import { useParams } from "react-router-dom";
+import useGetSingleNftData from "../hooks/useGetSingleNftData";
 import {
   Breadcrumb,
   NftDescriptionTab,
   NftImageDescription,
 } from "../wrappers";
+import { Loader } from "../components";
 
 const SingleNFT = () => {
-const pathname ="maham"
+  // get product id from url
+  const { id } = useParams();
+
+  console.log("this is id", id);
+  const { isLoading, nftData } = useGetSingleNftData(
+    "GpnMpusHmCiXkJhkTjgAo7PM7XBwyRv9PzVjNpB2GmwL"
+  );
+
+  if (isLoading) {
+    console.log("this is loading");
+  } else {
+    console.log("this is nftData", nftData);
+  }
+
   return (
     <>
-     
-
-      <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
-      <BreadcrumbsItem to={pathname}>NFT</BreadcrumbsItem>
-
       <Layout headerTop="visible">
         {/* breadcrumb */}
-        <Breadcrumb />
-        {/* product description with image */}
-        <NftImageDescription spaceTopClass="pt-100" spaceBottomClass="pb-100" />
-        {/* product description tab */}
-        <NftDescriptionTab spaceBottomClass="pb-90" />
+
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            <BreadcrumbsItem to={"/"}>Home</BreadcrumbsItem>
+            <BreadcrumbsItem to={`/nft/${id}`}>{nftData.name}</BreadcrumbsItem>
+            <Breadcrumb />
+            {/* product description with image */}
+            <NftImageDescription
+              spaceTopClass="pt-100"
+              spaceBottomClass="pb-100"
+              nftData={nftData}
+            />
+            {/* product description tab */}
+            <NftDescriptionTab spaceBottomClass="pb-90" nftData={nftData} />
+          </>
+        )}
       </Layout>
     </>
   );

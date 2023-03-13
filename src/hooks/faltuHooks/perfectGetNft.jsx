@@ -45,6 +45,7 @@ export default function useGetAllNFTsData() {
     // eslint-disable-next-line
   }, []);
 
+  console.log("allNfts", allNfts);
 
   return { isLoading, allNfts };
 }

@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Paginator from "react-hooks-paginator";
 import { getSortedProducts } from "../../helpers/product";
-import ShopNft from "./ShopNft";
 import useGetAllNFTsData from "../../hooks/useGetAllNFTsData";
 
-import { Loader } from "../../components/index";
+import { Loader, ShopNft } from "../../components/index";
 
 const AllNFTsWrapper = () => {
   const { isLoading, allNfts } = useGetAllNFTsData();
 
+  console.log(allNfts, "allNfts");
+  console.log(isLoading);
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
   const [filterSortType, setFilterSortType] = useState("");
@@ -44,32 +45,24 @@ const AllNFTsWrapper = () => {
       setSortedProducts(sortedProducts);
       setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
     }
-  }, [
-    offset,
-    sortType,
-    sortValue,
-    filterSortType,
-    filterSortValue,
-    allNfts,
-    isLoading,
-  ]);
+  }, [offset, sortType, sortValue, filterSortType, filterSortValue, allNfts,
+    isLoading]);
 
   return (
     <>
-    <div mt={45} mb="45">
-    {isLoading ? (
-        <Loader />
-      ) : (
-        <div className="shop-area pt-95 pb-100">
-          <div className="container">
-            <div className="row">
-              {allNfts.length > 0 ? (
+      <div mt={45} mb="45">
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <div className="shop-area pt-95 pb-100">
+            <div className="container">
+              <div className="row">
                 <div className="col-lg-12 order-1 order-lg-2">
                   {/* shop page content default */}
 
-                  <ShopNft
-                    nftsData={currentData}
-                  />
+                  <ShopNft nftsData={currentData} />
+                  
+                  
 
                   {/* nft  pagination */}
                   <div className="pro-pagination-style text-center mt-30 mb-60">
@@ -86,15 +79,11 @@ const AllNFTsWrapper = () => {
                     />
                   </div>
                 </div>
-              ) : (
-                <div> No NFTs Found </div>
-              )}
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
-     
+        )}
+      </div>
     </>
   );
 };

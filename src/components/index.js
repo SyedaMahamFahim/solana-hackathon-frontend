@@ -1,13 +1,12 @@
 import ConnectBtn from "./ConnectBtn/ConnectBtn";
-import NftGridSingle from "./nfts/NftGridSingle";
+import NftGridSingle from "./nfts/NftGridComponent/sub-component/NftGridSingle";
 import NftImageGallery from "./nfts/NftImageGallery";
 import NftDescriptionInfo from "./nfts/NftDescriptionInfo";
-import MarketPlaceTopActionFilter  from "./nfts/MarketPlaceTopActionFilter";
+import MarketPlaceTopActionFilter from "./nfts/MarketPlaceTopActionFilter";
 
 // Section Title
 import SectionTitleWithText from "./section-title/SectionTitleWithText";
 import SectionTitleWithoutText from "./section-title/SectionTitleWithoutText";
-
 
 // Header
 import Logo from "./header/Logo";
@@ -32,34 +31,44 @@ import FormInput from "./form-input/FormInput";
 
 // Loader
 import Loader from "./Loader/Loader";
-export{
-    ConnectBtn,
-    NftGridSingle,
-    NftImageGallery,
-    NftDescriptionInfo,
-    MarketPlaceTopActionFilter,
-    SectionTitleWithText,
-    SectionTitleWithoutText,
 
-    // Header
-    Logo,
-    NavMenu,
-    MobileMenu,
-    IconGroup,
-    WalletBtn,
-    
-    // Slider
-    HeroSliderSingle,
+// nft
 
-    // TextGridSingle
-    TextGridSingle,
-    
-    // Error Message
-    ErrorMessage,
+import ShopNft from "./nfts/NftGridComponent/ShopNft";
 
-    // FormInput
-    FormInput,
 
-    // Loader
-    Loader
-}
+
+export {
+  ConnectBtn,
+  NftGridSingle,
+  NftImageGallery,
+  NftDescriptionInfo,
+  MarketPlaceTopActionFilter,
+  SectionTitleWithText,
+  SectionTitleWithoutText,
+
+  // Header
+  Logo,
+  NavMenu,
+  MobileMenu,
+  IconGroup,
+  WalletBtn,
+
+  // Slider
+  HeroSliderSingle,
+
+  // TextGridSingle
+  TextGridSingle,
+
+  // Error Message
+  ErrorMessage,
+
+  // FormInput
+  FormInput,
+
+  // Loader
+  Loader,
+
+  // Nft
+  ShopNft
+};

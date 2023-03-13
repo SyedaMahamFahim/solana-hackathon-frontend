@@ -1,7 +1,9 @@
 import React from "react";
 
 import { NftDescriptionInfo, NftImageGallery } from "../../components/index";
+
 const NftImageDescription = ({ spaceTopClass, spaceBottomClass, nftData }) => {
+  const { image, name } = nftData;
   return (
     <div
       className={`shop-area ${spaceTopClass ? spaceTopClass : ""} ${
@@ -11,15 +13,11 @@ const NftImageDescription = ({ spaceTopClass, spaceBottomClass, nftData }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-6">
-            <NftImageGallery nftImage={nftData.image} nftName={nftData.name} />
+            <NftImageGallery nftImage={image} nftName={name} />
           </div>
           <div className="col-lg-6 col-md-6">
             {/* product description info */}
-            <NftDescriptionInfo
-              nftName={nftData.name}
-              nftSymbol={nftData.symbol}
-              nftDescription={nftData.description}
-            />
+            <NftDescriptionInfo />
           </div>
         </div>
       </div>

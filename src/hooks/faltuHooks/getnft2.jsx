@@ -8,7 +8,9 @@ import {
 
 export default function useGetAllNFTsData() {
   const [isLoading, setIsLoading] = useState(false);
+  const [singleNftLoading, setSingleNftLoading] = useState(false);
   const [allNfts, setAllNfts] = useState([]);
+  const [singleNftDetails, setSingleNftDetails] = useState({})
 
   const connection = new Connection(clusterApiUrl("devnet"));
   const user = Keypair.generate();
@@ -24,27 +26,39 @@ export default function useGetAllNFTsData() {
     );
   const creator = new PublicKey("9QPLuyNKLRdux8Ce5UFpF2xq7fd8Bnb6mfWKkVdCrqsk");
 
+  const getNft = async () => {
+    setSingleNftLoading(true);
+    try {
+      const mintAddress = new PublicKey(
+        "GpnMpusHmCiXkJhkTjgAo7PM7XBwyRv9PzVjNpB2GmwL"
+      );
+
+      const nft = await metaplex.nfts().findByMint({ mintAddress });
+      setSingleNftDetails(nft)
+      console.log(nft);
+    } catch (error) {
+      console.log(error);
+    }
+    setSingleNftLoading(false);
+  };
+
   async function main() {
     setIsLoading(true);
 
-    try {
-      const nfts = await metaplex
-        .nfts()
-        .findAllByCreator({ creator, position: 2 });
+    const nfts = await metaplex
+      .nfts()
+      .findAllByCreator({ creator, position: 2 });
+    setAllNfts(nfts);
 
-      setAllNfts(nfts);
-    } catch (error) {
-      console.log("error", error);
-    }
     setIsLoading(false);
   }
 
   useEffect(() => {
     main();
-
     // eslint-disable-next-line
   }, []);
 
+  // return { isLoading, allNfts,singleNftLoading,singleNftDetails,getNft };
+  return { isLoading, allNfts};
 
-  return { isLoading, allNfts };
 }

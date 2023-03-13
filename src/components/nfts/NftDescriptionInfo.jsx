@@ -1,22 +1,19 @@
 import React from "react";
 
 
-const NftDescriptionInfo = () => {
+const NftDescriptionInfo = ({nftName,nftSymbol,nftDescription}) => {
   
 
   return (
     <div className="product-details-content ml-70">
-      <h2>Diamond NFT</h2>
+      <h2>{nftName}</h2>
       <div className="product-details-price">
-        <span>34$ ≈ 13Eth</span>
+        <span>34 {nftSymbol}</span>
       </div>
 
       <div className="pro-details-list">
         <p>
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-          autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-          nihil molestiae consequatur.
+          {nftDescription}
         </p>
       </div>
 

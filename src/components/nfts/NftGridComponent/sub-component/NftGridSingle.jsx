@@ -1,29 +1,31 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { TransactionContext } from "../../context/TransactionsProvider";
-import WalletBtn from "../WalletBtn/WalletBtn";
+import { TransactionContext } from "../../../../context/TransactionsProvider";
+import WalletBtn from "../../../WalletBtn/WalletBtn";
 import axios from "axios";
 
-const NftGridSingle = ({ nft,id, sliderClassName, spaceBottomClass }) => {
+const NftGridSingle = ({ nft, id, sliderClassName, spaceBottomClass }) => {
   const { isPhantomInstall, isPhantomConnected } =
-  React.useContext(TransactionContext);
+    React.useContext(TransactionContext);
 
-  const [imageUri, setImageUri] = useState("")
+  const nftAddress=nft.address.toBase58(); 
+  const [imageUri, setImageUri] = useState("");
 
   const getImageUri = async () => {
-    try{
-      const response = await axios.get(nft.uri)
-      setImageUri(response.data.image)
+    try {
+      const response = await axios.get(nft.uri);
+      setImageUri(response.data.image);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
+  };
 
 
-  }
   useEffect(() => {
-    getImageUri()
-      // eslint-disable-next-line
+    getImageUri();
+    // eslint-disable-next-line
   }, [imageUri]);
+
   return (
     <>
       <div
@@ -35,19 +37,19 @@ const NftGridSingle = ({ nft,id, sliderClassName, spaceBottomClass }) => {
           className={`product-wrap ${spaceBottomClass ? spaceBottomClass : ""}`}
         >
           <div className="product-img">
-            <Link to={"/nft/" + id}>
-              <img className="default-img" 
-               
-              src={imageUri}
-              alt={nft.name} 
-              width="300px" 
-              height="300px"
+            <Link to={"/nft/" + nftAddress}>
+              <img
+                className="default-img"
+                src={imageUri}
+                alt={nft.name}
+                width="300px"
+                height="300px"
               />
             </Link>
 
             <div className="product-action">
               <div className="pro-same-action pro-cart">
-              {!isPhantomConnected ? (
+                {!isPhantomConnected ? (
                   <WalletBtn />
                 ) : !isPhantomInstall ? (
                   <a
