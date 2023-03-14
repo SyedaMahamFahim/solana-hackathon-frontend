@@ -62,6 +62,7 @@ const MineNftInputs = () => {
       `Token Mint: https://explorer.solana.com/address/${nft.address.toString()}?cluster=devnet`
     );
 
+  
     return nft;
   }
 
@@ -107,9 +108,7 @@ const MineNftInputs = () => {
           })
         );
 
-      const imageUri = `https://cdn.discordapp.com/attachments/1075720432688320563/1084720334529364030/diamondnewImage.jpg`;
 
-      console.log(`Image uri: ${imageUri}`);
 
       const { uri } = await metaplex.nfts().uploadMetadata(nftDataObj).then();
       console.log("metadata uri:", uri);
@@ -122,6 +121,11 @@ const MineNftInputs = () => {
           data.symbol,
           data.sellerFeeBasisPoints
         );
+
+          window.alert(
+            `Token Mint Successfully`
+          );
+
       } else {
         console.log(`please connect wallet`);
       }
@@ -131,19 +135,10 @@ const MineNftInputs = () => {
       setIsLoading(false);
     }
 
-    // reset();
+    reset();
   };
 
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  //   // data.image[0]
-  //   //   ? (data.image = URL.createObjectURL(data.image[0]))
-  //   //   : (data.image =
-  //   //       "https://joyhsutlrr2k6dyg46vh4cz57w4bf6leg5lztyijzr7xwbkufiwa.arweave.net/S7B5UmuMdK8PBueqfgs9_bgS-WQ3V5nhCcx_ewVUKiw");
   
-  //         console.log(data.image);
-  //       };
-
   return (
     <>
       <div className="container">
