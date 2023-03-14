@@ -25,6 +25,7 @@ const MineNftInputs = () => {
   const [nft, setNft] = useState("/Profile.png");
   const [nftPreview, setNftPreview] = useState("");
 
+
   const { connection } = useConnection();
   const wallet = useWallet();
   const { publicKey } = useWallet();
@@ -79,94 +80,92 @@ const MineNftInputs = () => {
     });
 
     setValue(name, value, { shouldValidate: true });
-
-    if (name === "image") {
-      registerNftImageChange(e);
-    }
   };
 
-  const registerNftImageChange = (e) => {
-    const reader = new FileReader();
+  // const onSubmit = async (data) => {
+  //   try {
+  //     setIsLoading(true);
+  //     let attributes = [];
+  //     nftMetaData.map((item) => {
+  //       if (item.isAttribute === true) {
+  //         const attribute = {
+  //           trait_type: item.name,
+  //           value: data[item.name],
+  //         };
+  //         attributes.push(attribute);
+  //       }
+  //     });
 
-    reader.onload = () => {
-      if (reader.readyState === 2) {
-        setNftPreview(reader.result);
-        setNft(reader.result);
-      }
-    };
+  //     // covert image to base64
+  //     // const file = data.image[0];
+  //     // const reader = new FileReader();
+  //     // reader.readAsDataURL(file);
+  //     // let base64;
+  //     // reader.onload = async () => {
+  //     //    base64 = reader.result;
+  //     // };
 
-    reader.readAsDataURL(e.target.files[0]);
-  };
+  //    const base64= new Uint16Array(data.image).buffer;
+
+
+  //     const metaplex = Metaplex.make(connection)
+  //       .use(walletAdapterIdentity(wallet))
+  //       .use(
+  //         bundlrStorage({
+  //           address: "https://devnet.bundlr.network",
+  //           providerUrl: "https://api.devnet.solana.com",
+  //           timeout: 60000,
+  //         })
+  //       );
+
+    
+
+  //     const fileMetaplex = toMetaplexFile(base64, data.image[0].name);
+
+  //     const imageUri = await metaplex.storage().upload(fileMetaplex);
+
+  //     console.log(`Image uri: ${imageUri}`);
+
+  //     const nftDataObj = {
+  //       name: data.name,
+  //       description: data.description,
+  //       sellerFeeBasisPoints: data.sellerFeeBasisPoints,
+  //       image: imageUri,
+  //       attributes: attributes,
+  //     };
+
+  //     const { uri } = await metaplex
+  //       .nfts()
+  //       .uploadMetadata({
+  //         ...nftDataObj })
+  //       .then();
+  //     console.log("metadata uri:", uri);
+  //     if (publicKey !== null) {
+  //       await createNft(
+  //         metaplex,
+  //         uri,
+  //         publicKey,
+  //         data.name,
+  //         data.symbol,
+  //         data.sellerFeeBasisPoints
+  //       );
+
+  //       window.alert(`Token Mint Successfully`);
+  //     } else {
+  //       console.log(`please connect wallet`);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+
+  //   reset();
+  // };
 
   const onSubmit = async (data) => {
-    try {
-      setIsLoading(true);
-      let attributes = [];
-      nftMetaData.map((item) => {
-        if (item.isAttribute === true) {
-          const attribute = {
-            trait_type: item.name,
-            value: data[item.name],
-          };
-          attributes.push(attribute);
-        }
-      });
-
-      const metaplex = Metaplex.make(connection)
-        .use(walletAdapterIdentity(wallet))
-        .use(
-          bundlrStorage({
-            address: "https://devnet.bundlr.network",
-            providerUrl: "https://api.devnet.solana.com",
-            timeout: 60000,
-          })
-        );
-
-      const fileMetaplex = toMetaplexFile(data.image, data.image[0].name);
-
-      const imageUri = await metaplex.storage().upload(fileMetaplex);
-
-      console.log(`Image uri: ${imageUri}`);
-   
-
-      const nftDataObj = {
-        name: data.name,
-        description: data.description,
-        sellerFeeBasisPoints: data.sellerFeeBasisPoints,
-        image: imageUri,
-        attributes: attributes,
-      };
-
-      const { uri } = await metaplex
-        .nfts()
-        .uploadMetadata({
-          ...nftDataObj })
-        .then();
-      console.log("metadata uri:", uri);
-      if (publicKey !== null) {
-        await createNft(
-          metaplex,
-          uri,
-          publicKey,
-          data.name,
-          data.symbol,
-          data.sellerFeeBasisPoints
-        );
-
-        window.alert(`Token Mint Successfully`);
-      } else {
-        console.log(`please connect wallet`);
-      }
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-
-    reset();
-  };
-
- 
+    console.log(data.image[0].name);
+  }
 
   return (
     <>
@@ -177,7 +176,6 @@ const MineNftInputs = () => {
               <h2>Enter Your Diamond Meta Data</h2>
             </div>
             <form
-              encType="multipart/form-data"
               className="contact-form-style"
               onSubmit={handleSubmit(onSubmit)}
             >
@@ -207,18 +205,8 @@ const MineNftInputs = () => {
                   type="file"
                   name="image"
                   accept="image/*"
-                  onChange={registerNftImageChange}
                   {...register("image")}
                 />
-
-                {nftPreview !== "" && (
-                  <img
-                    src={nftPreview}
-                    alt="Nft Preview"
-                    width={"80px"}
-                    height={"auto"}
-                  />
-                )}
 
                 <div className="col-lg-12">
                   <button className="submit" type="submit">
