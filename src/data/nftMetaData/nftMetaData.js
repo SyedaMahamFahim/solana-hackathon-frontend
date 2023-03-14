@@ -243,15 +243,15 @@ const nftMetaData = [
     label: "Description",
     isAttribute: false,
   },
-  {
-    colNo: 12,
-    tag: "input",
-    type: "file",
-    name: "image",
-    placeholder: "Image",
-    label: "Image",
-    isAttribute: false,
-  },
+  // {
+  //   colNo: 12,
+  //   tag: "input",
+  //   type: "file",
+  //   name: "image",
+  //   placeholder: "Image",
+  //   label: "Image",
+  //   isAttribute: false,
+  // },
 ];
 
 export default nftMetaData;

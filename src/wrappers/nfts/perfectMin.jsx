@@ -93,7 +93,8 @@ const MineNftInputs = () => {
         name: data.name,
         description: data.description,
         sellerFeeBasisPoints: data.sellerFeeBasisPoints,
-        image: data.image[0],
+        image:
+          "https://joyhsutlrr2k6dyg46vh4cz57w4bf6leg5lztyijzr7xwbkufiwa.arweave.net/S7B5UmuMdK8PBueqfgs9_bgS-WQ3V5nhCcx_ewVUKiw",
         attributes: attributes,
       };
 
@@ -134,15 +135,10 @@ const MineNftInputs = () => {
     // reset();
   };
 
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  //   // data.image[0]
-  //   //   ? (data.image = URL.createObjectURL(data.image[0]))
-  //   //   : (data.image =
-  //   //       "https://joyhsutlrr2k6dyg46vh4cz57w4bf6leg5lztyijzr7xwbkufiwa.arweave.net/S7B5UmuMdK8PBueqfgs9_bgS-WQ3V5nhCcx_ewVUKiw");
   
-  //         console.log(data.image);
-  //       };
+  // const onSubmit=(data)=>{
+  //   console.log(data)
+  // }
 
   return (
     <>
@@ -157,7 +153,7 @@ const MineNftInputs = () => {
               onSubmit={handleSubmit(onSubmit)}
             >
               <div className="row">
-                {nftMetaData.map((item, index) => {
+                {/* {nftMetaData.map((item, index) => {
                   return (
                     <div className={`col-lg-${item.colNo}`} key={index}>
                       {" "}
@@ -175,15 +171,14 @@ const MineNftInputs = () => {
                       />
                     </div>
                   );
-                })}
+                })} */}
 
-                <label>Image</label>
-                <input
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  {...register("image")}
-                />
+                <input type="file" name="image" id="image" />
+                
+             
+            
+            
+
 
                 <div className="col-lg-12">
                   <button className="submit" type="submit">
