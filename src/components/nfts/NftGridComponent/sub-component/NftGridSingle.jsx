@@ -62,7 +62,7 @@ const NftGridSingle = ({ nft, id, sliderClassName, spaceBottomClass }) => {
                     Download Phantom Wallet
                   </a>
                 ) : (
-                  <Link to={"/"}> Buy now </Link>
+                  <Link to={"/nft/" + nftAddress}> View More </Link>
                 )}
               </div>
             </div>

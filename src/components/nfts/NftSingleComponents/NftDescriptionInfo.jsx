@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const NftDescriptionInfo = ({nftName,nftSymbol,nftDescription}) => {
@@ -17,13 +18,7 @@ const NftDescriptionInfo = ({nftName,nftSymbol,nftDescription}) => {
         </p>
       </div>
 
-      <div className="pro-details-quality">
-        <div className="pro-details-cart btn-hover ml-0">
-          <a href={"/"} rel="noopener noreferrer" target="_blank">
-            Buy Now
-          </a>
-        </div>
-      </div>
+      
     </div>
   );
 };
