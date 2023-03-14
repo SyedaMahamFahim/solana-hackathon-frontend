@@ -22,7 +22,7 @@ export default function useGetAllNFTsData() {
         timeout: 60000,
       })
     );
-  const creator = new PublicKey("9QPLuyNKLRdux8Ce5UFpF2xq7fd8Bnb6mfWKkVdCrqsk");
+  const creator = new PublicKey("7VS5xQ4knB6ocFH7uExuUHjzwWBkEQbvmvmjnsCGJQE");
 
   async function main() {
     setIsLoading(true);
